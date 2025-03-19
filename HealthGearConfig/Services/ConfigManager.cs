@@ -47,20 +47,6 @@ namespace HealthGearConfig.Services
                 string json = File.ReadAllText(ConfigFilePath);
                 var settings = JsonConvert.DeserializeObject<AppSettings>(json, JsonOptions) ?? new AppSettings();
 
-                // 🔓 Decrittografiamo la password SMTP solo se è crittografata
-                if (!string.IsNullOrEmpty(settings.SMTP.Password) && settings.SMTP.Password.StartsWith("ENC:"))
-                {
-                    try
-                    {
-                        settings.SMTP.Password = EncryptionHelper.Decrypt(settings.SMTP.Password.Substring(4));
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine($"❌ Errore nella decrittazione della password SMTP: {ex.Message}");
-                        settings.SMTP.Password = ""; // Preveniamo un valore errato
-                    }
-                }
-
                 return settings;
             }
             catch (JsonException ex)
@@ -80,8 +66,6 @@ namespace HealthGearConfig.Services
             }
         }
 
-
-
         /// <summary>
         /// Salva le impostazioni nel file JSON.
         /// Crittografa automaticamente la password SMTP prima di salvarla.
@@ -97,12 +81,6 @@ namespace HealthGearConfig.Services
                 {
                     Console.WriteLine("⚠️ Il file di configurazione non esiste. Creazione di uno nuovo...");
                     File.WriteAllText(ConfigFilePath, "{}"); // Creiamo un file JSON vuoto
-                }
-
-                // 🔐 Crittografiamo la password SMTP solo se non è già crittografata
-                if (!string.IsNullOrEmpty(settings.SMTP.Password) && !settings.SMTP.Password.StartsWith("ENC:"))
-                {
-                    settings.SMTP.Password = "ENC:" + EncryptionHelper.Encrypt(settings.SMTP.Password);
                 }
 
                 string json = JsonConvert.SerializeObject(settings, JsonOptions);
@@ -122,8 +100,6 @@ namespace HealthGearConfig.Services
                 Console.WriteLine($"❌ Errore generico nel salvataggio delle impostazioni: {ex.Message}");
             }
         }
-
-
 
         /// <summary>
         /// Esporta le impostazioni in un file JSON specificato dall'utente.
@@ -162,20 +138,6 @@ namespace HealthGearConfig.Services
 
                 var importedSettings = JsonConvert.DeserializeObject<AppSettings>(json) ?? throw new Exception("Errore nella deserializzazione delle impostazioni.");
 
-                // 🔓 Decrittografiamo la password SMTP solo se è crittografata
-                if (!string.IsNullOrEmpty(importedSettings.SMTP.Password) && importedSettings.SMTP.Password.StartsWith("ENC:"))
-                {
-                    try
-                    {
-                        importedSettings.SMTP.Password = EncryptionHelper.Decrypt(importedSettings.SMTP.Password.Substring(4));
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine($"❌ Errore nella decrittazione della password SMTP: {ex.Message}");
-                        importedSettings.SMTP.Password = "";
-                    }
-                }
-
                 return importedSettings;
             }
             catch (JsonException ex)
@@ -200,7 +162,6 @@ namespace HealthGearConfig.Services
                 JObject parsedJson = JObject.Parse(json);
 
                 return parsedJson.ContainsKey("Server") &&
-                       parsedJson.ContainsKey("SMTP") &&
                        parsedJson.ContainsKey("Logging");
             }
             catch (Exception)
@@ -217,7 +178,6 @@ namespace HealthGearConfig.Services
     public class AppSettings
     {
         public ServerSettings Server { get; set; } = new ServerSettings();
-        public SMTPSettings SMTP { get; set; } = new SMTPSettings();
         public LoggingSettings Logging { get; set; } = new LoggingSettings();
     }
 }

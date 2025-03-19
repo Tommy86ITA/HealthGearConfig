@@ -18,7 +18,6 @@ namespace HealthGearConfig
         /// </summary>
         private bool exitConfirmed = false;
 
-
         /// <summary>
         /// Costruttore della finestra principale.
         /// Inizializza i componenti e aggiorna lo stato del servizio all'avvio.
@@ -31,13 +30,6 @@ namespace HealthGearConfig
             numericUpDownServerPort.ValueChanged += SettingsChanged;
             textBoxDatabasePath.TextChanged += SettingsChanged;
             textBoxFileUploadPath.TextChanged += SettingsChanged;
-            textBoxSMTPHost.TextChanged += SettingsChanged;
-            numericUpDownSMTPPort.ValueChanged += SettingsChanged;
-            textBoxSMTPUsername.TextChanged += SettingsChanged;
-            textBoxSMTPPassword.TextChanged += SettingsChanged;
-            checkBoxSSL.CheckedChanged += SettingsChanged;
-            checkBoxSMTPAuth.CheckedChanged += SettingsChanged;
-            comboBoxLogLevel.SelectedIndexChanged += SettingsChanged;
             textBoxLogPath.TextChanged += SettingsChanged;
             this.FormClosing += Form1_OnFormClosing;
 
@@ -47,11 +39,9 @@ namespace HealthGearConfig
             settingsModified = false; // 🚫 Resetta il flag delle impostazioni modificate
         }
 
-
         ///--------------------------------------------------------------------------------
         /// Metodi per la gestione dell'avvio e arresto del servizio
         ///--------------------------------------------------------------------------------
-
         /// <summary>
         /// Gestisce il click sul pulsante "Avvia Servizio".
         /// Avvia il servizio e aggiorna la UI in base al nuovo stato.
@@ -87,7 +77,6 @@ namespace HealthGearConfig
         ///--------------------------------------------------------------------------------
         /// Gestione dei pulsanti per la selezione delle cartelle
         ///--------------------------------------------------------------------------------
-
         /// <summary>
         /// Gestione logica dei folder browser per la selezione del percorso del database, cartella di upload e log.
         /// <summay/>
@@ -109,7 +98,6 @@ namespace HealthGearConfig
         ///--------------------------------------------------------------------------------
         /// Metodi helper per la gestione dei folder browser
         ///--------------------------------------------------------------------------------
-
         /// <summary>
         /// Apre una finestra di dialogo per selezionare la cartella in cui verrà salvato il database.
         /// </summary>
@@ -149,9 +137,11 @@ namespace HealthGearConfig
             }
         }
 
+        /// <summary>
         ///--------------------------------------------------------------------------------
         /// Gestione dei pulsanti per l'esportazione, importazione e reset delle impostazioni
         ///--------------------------------------------------------------------------------
+        /// </summary>
         private void buttonExportSettings_Click(object? sender, EventArgs e)
         {
             ExportSettings(); // ✅ Esporta le impostazioni
@@ -182,11 +172,9 @@ namespace HealthGearConfig
             ResetSettings(); // ✅ Ripristina le impostazioni predefinite
         }
 
-
         ///--------------------------------------------------------------------------------
         /// Metodi helper per la gestione dell'interfaccia grafica
         ///--------------------------------------------------------------------------------
-
         /// <summary>
         /// Aggiorna l'interfaccia utente in base allo stato attuale del servizio.
         /// - Cambia il colore del pannello di stato.
@@ -249,10 +237,9 @@ namespace HealthGearConfig
         }
 
         ///--------------------------------------------------------------------------------
-        /// Metodi per la gestione delle impostazioni (caricamento, salvataggio, 
+        /// Metodi per la gestione delle impostazioni (caricamento, salvataggio,
         /// esportazione, importazione e reset)
         ///--------------------------------------------------------------------------------
-
         /// <summary>
         /// Richiamato quando le impostazioni vengono modificate
         /// <!-- Aggiunge un flag per segnalare che le impostazioni sono state modificate -->
@@ -274,23 +261,7 @@ namespace HealthGearConfig
             textBoxDatabasePath.Text = settings.Server.DatabasePath;
             textBoxFileUploadPath.Text = settings.Server.FileUploadPath;
 
-            // Impostazioni SMTP
-            textBoxSMTPHost.Text = settings.SMTP.Host;
-            numericUpDownSMTPPort.Value = settings.SMTP.Port;
-            textBoxSMTPUsername.Text = settings.SMTP.Username;
-            textBoxSMTPPassword.Text = settings.SMTP.Password;
-            checkBoxSSL.Checked = settings.SMTP.UseSSL;
-            checkBoxSMTPAuth.Checked = settings.SMTP.RequiresAuthentication;
-
             // Impostazioni Logging
-            if (comboBoxLogLevel.Items.Contains(settings.Logging.LogLevel))
-            {
-                comboBoxLogLevel.SelectedItem = settings.Logging.LogLevel;
-            }
-            else
-            {
-                comboBoxLogLevel.SelectedIndex = 0; // Imposta "Verbose" come default
-            }
             textBoxLogPath.Text = settings.Logging.LogPath;
         }
 
@@ -307,18 +278,9 @@ namespace HealthGearConfig
                     DatabasePath = textBoxDatabasePath.Text,
                     FileUploadPath = textBoxFileUploadPath.Text
                 },
-                SMTP = new SMTPSettings
-                {
-                    Host = textBoxSMTPHost.Text,
-                    Port = (int)numericUpDownSMTPPort.Value,
-                    Username = textBoxSMTPUsername.Text,
-                    Password = textBoxSMTPPassword.Text, // 🔐 Verrà crittografata in ConfigManager
-                    UseSSL = checkBoxSSL.Checked,
-                    RequiresAuthentication = checkBoxSMTPAuth.Checked
-                },
+
                 Logging = new LoggingSettings
                 {
-                    LogLevel = comboBoxLogLevel.SelectedItem?.ToString() ?? "Verbose",
                     LogPath = textBoxLogPath.Text
                 }
             };
@@ -331,7 +293,7 @@ namespace HealthGearConfig
         /// <summary>
         /// Esporta le impostazioni attuali in un file JSON selezionato dall'utente.
         /// </summary>
-        private void ExportSettings()
+        private static void ExportSettings()
         {
             using SaveFileDialog saveFileDialog = new();
             saveFileDialog.Filter = "File JSON (*.json)|*.json";
@@ -367,12 +329,7 @@ namespace HealthGearConfig
             {
                 try
                 {
-                    var importedSettings = ConfigManager.ImportSettings(openFileDialog.FileName);
-
-                    if (importedSettings == null)
-                    {
-                        throw new Exception("Il file selezionato non contiene una configurazione valida.");
-                    }
+                    var importedSettings = ConfigManager.ImportSettings(openFileDialog.FileName) ?? throw new Exception("Il file selezionato non contiene una configurazione valida.");
 
                     // 📌 Se il JSON è valido, aggiorniamo l'anteprima e abilitiamo i pulsanti
                     textBoxPreview.Text = File.ReadAllText(openFileDialog.FileName);
@@ -409,14 +366,6 @@ namespace HealthGearConfig
                 textBoxDatabasePath.Text = importedSettings.Server.DatabasePath;
                 textBoxFileUploadPath.Text = importedSettings.Server.FileUploadPath;
 
-                textBoxSMTPHost.Text = importedSettings.SMTP.Host;
-                numericUpDownSMTPPort.Value = importedSettings.SMTP.Port;
-                textBoxSMTPUsername.Text = importedSettings.SMTP.Username;
-                textBoxSMTPPassword.Text = importedSettings.SMTP.Password;
-                checkBoxSSL.Checked = importedSettings.SMTP.UseSSL;
-                checkBoxSMTPAuth.Checked = importedSettings.SMTP.RequiresAuthentication;
-
-                comboBoxLogLevel.SelectedItem = importedSettings.Logging.LogLevel;
                 textBoxLogPath.Text = importedSettings.Logging.LogPath;
 
                 // Salviamo le nuove impostazioni
@@ -449,7 +398,6 @@ namespace HealthGearConfig
         /// <summary>
         /// Ripristina tutte le impostazioni ai valori predefiniti.
         /// </summary>
-
         private void ResetSettings()
         {
             if (MessageBox.Show("Sei sicuro di voler ripristinare le impostazioni predefinite?",
@@ -466,10 +414,10 @@ namespace HealthGearConfig
             }
         }
 
-
+        /// <summary>
         ///--------------------------------------------------------------------------------
         /// Gestione degli eventi di chiusura dell'applicazione
-        ///--------------------------------------------------------------------------------
+        /// </summary>
         private void buttonExit_Click(object sender, EventArgs e)
         {
             ExitApplication(); // ✅ Gestisce l'uscita dall'applicazione
@@ -504,18 +452,6 @@ namespace HealthGearConfig
                 exitConfirmed = true; // ✅ Imposta il flag per evitare doppia richiesta
                 Application.Exit();
             }
-        }
-
-        private void buttonSMTPTest_Click(object sender, EventArgs e)
-        {
-            // 🔍 Recupera i parametri attuali dalla UI e li passa a SmtpTester
-            SmtpTester.TestSMTP(
-                textBoxSMTPHost.Text,
-                (int)numericUpDownSMTPPort.Value,
-                textBoxSMTPUsername.Text,
-                textBoxSMTPPassword.Text,
-                checkBoxSSL.Checked
-            );
         }
     }
 }

@@ -1,5 +1,5 @@
-﻿// Licensed to the .NET Foundation under one or more agreements.
-// The .NET Foundation licenses this file to you under the MIT license.
+﻿using System;
+using System.IO;
 
 namespace HealthGearConfig.Settings
 {
@@ -15,13 +15,42 @@ namespace HealthGearConfig.Settings
         public int Port { get; set; } = 5051;
 
         /// <summary>
-        /// Percorso del file database SQLite.
+        /// Percorso predefinito del database in `C:\ProgramData\HealthGear\healthgear.db`
         /// </summary>
-        public string DatabasePath { get; set; } = @"C:\ProgramData\HealthGear\healthgear.db";
+        public string DatabasePath { get; set; }
 
         /// <summary>
         /// Percorso della cartella in cui vengono salvati i file caricati dagli utenti.
         /// </summary>
-        public string FileUploadPath { get; set; } = @"C:\ProgramData\HealthGear\Uploads";
+        public string FileUploadPath { get; set; }
+
+        /// <summary>
+        /// Costruttore: imposta i valori di default.
+        /// </summary>
+        public ServerSettings()
+        {
+            DatabasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "HealthGear", "healthgear.db");
+            FileUploadPath = @"C:\HealthGear\Uploads";
+        }
+
+        /// <summary>
+        /// Assicura che tutte le cartelle necessarie esistano.
+        /// </summary>
+        public void EnsureDirectoriesExist()
+        {
+            try
+            {
+                Console.WriteLine("🔄 Verifica e creazione cartelle necessarie...");
+
+                Directory.CreateDirectory(Path.GetDirectoryName(DatabasePath) ?? @"C:\ProgramData\HealthGear");
+                Directory.CreateDirectory(FileUploadPath);
+
+                Console.WriteLine("✅ Cartelle verificate e pronte all'uso.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"❌ Errore durante la creazione delle cartelle: {ex.Message}");
+            }
+        }
     }
 }

@@ -103,6 +103,5 @@ namespace HealthGearConfig.Services
                 throw new InvalidOperationException("Il servizio non è installato.");
             }
         }
-
     }
 }

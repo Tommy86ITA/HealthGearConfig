@@ -1,12 +1,13 @@
 ﻿using System.Diagnostics;
 using System.Security.Principal;
+using HealthGearConfig.Settings;
 
 namespace HealthGearConfig
 {
-    static class Program
+    internal static class Program
     {
         [STAThread]
-        static void Main()
+        private static void Main()
         {
             // 🔍 Controlla se l'app è in esecuzione come amministratore
             if (!IsRunningAsAdministrator())
@@ -42,6 +43,9 @@ namespace HealthGearConfig
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            var serverSettings = new ServerSettings();
+            serverSettings.EnsureDirectoriesExist();
+            Services.StartManager.EnsureDirectoriesExist();
             Application.Run(new MainForm());
         }
 

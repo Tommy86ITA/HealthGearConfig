@@ -31,777 +31,536 @@ namespace HealthGearConfig
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBoxServiceStatus = new System.Windows.Forms.GroupBox();
-            this.panelServiceStatus = new System.Windows.Forms.Panel();
-            this.labelServiceStatus = new System.Windows.Forms.Label();
-            this.buttonStopService = new System.Windows.Forms.Button();
-            this.buttonStartService = new System.Windows.Forms.Button();
-            this.tabServerSettings = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.buttonBrowseUploadPath = new System.Windows.Forms.Button();
-            this.textBoxFileUploadPath = new System.Windows.Forms.TextBox();
-            this.labelUploadFolderPath = new System.Windows.Forms.Label();
-            this.buttonBrowseDBFolderPath = new System.Windows.Forms.Button();
-            this.textBoxDatabasePath = new System.Windows.Forms.TextBox();
-            this.numericUpDownServerPort = new System.Windows.Forms.NumericUpDown();
-            this.labelDBFilepath = new System.Windows.Forms.Label();
-            this.labelServerPort = new System.Windows.Forms.Label();
-            this.tabPageSMTP = new System.Windows.Forms.TabPage();
-            this.buttonSMTPTest = new System.Windows.Forms.Button();
-            this.checkBoxSMTPAuth = new System.Windows.Forms.CheckBox();
-            this.checkBoxSSL = new System.Windows.Forms.CheckBox();
-            this.textBoxSMTPPassword = new System.Windows.Forms.TextBox();
-            this.labelSMTPPassword = new System.Windows.Forms.Label();
-            this.textBoxSMTPUsername = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBoxSMTPHost = new System.Windows.Forms.TextBox();
-            this.labelSMTPHost = new System.Windows.Forms.Label();
-            this.numericUpDownSMTPPort = new System.Windows.Forms.NumericUpDown();
-            this.labelHostPort = new System.Windows.Forms.Label();
-            this.tabPageLogging = new System.Windows.Forms.TabPage();
-            this.buttonBrowseLoggingPath = new System.Windows.Forms.Button();
-            this.textBoxLogPath = new System.Windows.Forms.TextBox();
-            this.labelLoggingPath = new System.Windows.Forms.Label();
-            this.comboBoxLogLevel = new System.Windows.Forms.ComboBox();
-            this.labelLoggingLevel = new System.Windows.Forms.Label();
-            this.tabPageManageSettings = new System.Windows.Forms.TabPage();
-            this.groupBoxReset = new System.Windows.Forms.GroupBox();
-            this.labelResetSettings = new System.Windows.Forms.Label();
-            this.buttonResetSettings = new System.Windows.Forms.Button();
-            this.groupBoxImportSettings = new System.Windows.Forms.GroupBox();
-            this.buttonDiscardImportedSettings = new System.Windows.Forms.Button();
-            this.buttonApplyImportedSettings = new System.Windows.Forms.Button();
-            this.labelSettingsPreview = new System.Windows.Forms.Label();
-            this.textBoxPreview = new System.Windows.Forms.TextBox();
-            this.labelImportSettings = new System.Windows.Forms.Label();
-            this.buttonImportSettings = new System.Windows.Forms.Button();
-            this.groupBoxExportSettings = new System.Windows.Forms.GroupBox();
-            this.labelExportSettings = new System.Windows.Forms.Label();
-            this.buttonExportSettings = new System.Windows.Forms.Button();
-            this.tabPageAbout = new System.Windows.Forms.TabPage();
-            this.buttonExit = new System.Windows.Forms.Button();
-            this.buttonSave = new System.Windows.Forms.Button();
-            this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
-            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.richTextBoxLicense = new System.Windows.Forms.RichTextBox();
-            this.groupBoxAbout = new System.Windows.Forms.GroupBox();
-            this.labelHealthGearVersion = new System.Windows.Forms.Label();
-            this.labelSoftwareVersion = new System.Windows.Forms.Label();
-            this.labelSoftwareName = new System.Windows.Forms.Label();
-            this.groupBoxServiceStatus.SuspendLayout();
-            this.tabServerSettings.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownServerPort)).BeginInit();
-            this.tabPageSMTP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSMTPPort)).BeginInit();
-            this.tabPageLogging.SuspendLayout();
-            this.tabPageManageSettings.SuspendLayout();
-            this.groupBoxReset.SuspendLayout();
-            this.groupBoxImportSettings.SuspendLayout();
-            this.groupBoxExportSettings.SuspendLayout();
-            this.tabPageAbout.SuspendLayout();
-            this.groupBoxAbout.SuspendLayout();
-            this.SuspendLayout();
+            groupBoxServiceStatus = new GroupBox();
+            panelServiceStatus = new Panel();
+            labelServiceStatus = new Label();
+            buttonStopService = new Button();
+            buttonStartService = new Button();
+            tabServerSettings = new TabControl();
+            tabPage1 = new TabPage();
+            buttonBrowseUploadPath = new Button();
+            textBoxFileUploadPath = new TextBox();
+            labelUploadFolderPath = new Label();
+            buttonBrowseDBFolderPath = new Button();
+            textBoxDatabasePath = new TextBox();
+            numericUpDownServerPort = new NumericUpDown();
+            labelDBFilepath = new Label();
+            labelServerPort = new Label();
+            tabPageLogging = new TabPage();
+            buttonBrowseLoggingPath = new Button();
+            textBoxLogPath = new TextBox();
+            labelLoggingPath = new Label();
+            tabPageManageSettings = new TabPage();
+            groupBoxReset = new GroupBox();
+            labelResetSettings = new Label();
+            buttonResetSettings = new Button();
+            groupBoxImportSettings = new GroupBox();
+            buttonDiscardImportedSettings = new Button();
+            buttonApplyImportedSettings = new Button();
+            labelSettingsPreview = new Label();
+            textBoxPreview = new TextBox();
+            labelImportSettings = new Label();
+            buttonImportSettings = new Button();
+            groupBoxExportSettings = new GroupBox();
+            labelExportSettings = new Label();
+            buttonExportSettings = new Button();
+            tabPageAbout = new TabPage();
+            groupBoxAbout = new GroupBox();
+            labelHealthGearVersion = new Label();
+            labelSoftwareVersion = new Label();
+            labelSoftwareName = new Label();
+            richTextBoxLicense = new RichTextBox();
+            buttonExit = new Button();
+            buttonSave = new Button();
+            folderBrowserDialog = new FolderBrowserDialog();
+            openFileDialog = new OpenFileDialog();
+            saveFileDialog = new SaveFileDialog();
+            groupBoxServiceStatus.SuspendLayout();
+            tabServerSettings.SuspendLayout();
+            tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownServerPort).BeginInit();
+            tabPageLogging.SuspendLayout();
+            tabPageManageSettings.SuspendLayout();
+            groupBoxReset.SuspendLayout();
+            groupBoxImportSettings.SuspendLayout();
+            groupBoxExportSettings.SuspendLayout();
+            tabPageAbout.SuspendLayout();
+            groupBoxAbout.SuspendLayout();
+            SuspendLayout();
             // 
             // groupBoxServiceStatus
             // 
-            this.groupBoxServiceStatus.Controls.Add(this.panelServiceStatus);
-            this.groupBoxServiceStatus.Controls.Add(this.labelServiceStatus);
-            this.groupBoxServiceStatus.Controls.Add(this.buttonStopService);
-            this.groupBoxServiceStatus.Controls.Add(this.buttonStartService);
-            this.groupBoxServiceStatus.Location = new System.Drawing.Point(14, 10);
-            this.groupBoxServiceStatus.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBoxServiceStatus.Name = "groupBoxServiceStatus";
-            this.groupBoxServiceStatus.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxServiceStatus.Size = new System.Drawing.Size(635, 96);
-            this.groupBoxServiceStatus.TabIndex = 0;
-            this.groupBoxServiceStatus.TabStop = false;
-            this.groupBoxServiceStatus.Text = "Stato servizio";
+            groupBoxServiceStatus.Controls.Add(panelServiceStatus);
+            groupBoxServiceStatus.Controls.Add(labelServiceStatus);
+            groupBoxServiceStatus.Controls.Add(buttonStopService);
+            groupBoxServiceStatus.Controls.Add(buttonStartService);
+            groupBoxServiceStatus.Location = new Point(19, 15);
+            groupBoxServiceStatus.Name = "groupBoxServiceStatus";
+            groupBoxServiceStatus.Size = new Size(847, 144);
+            groupBoxServiceStatus.TabIndex = 0;
+            groupBoxServiceStatus.TabStop = false;
+            groupBoxServiceStatus.Text = "Stato servizio";
             // 
             // panelServiceStatus
             // 
-            this.panelServiceStatus.BackColor = System.Drawing.Color.Red;
-            this.panelServiceStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelServiceStatus.Location = new System.Drawing.Point(345, 36);
-            this.panelServiceStatus.Margin = new System.Windows.Forms.Padding(2);
-            this.panelServiceStatus.Name = "panelServiceStatus";
-            this.panelServiceStatus.Size = new System.Drawing.Size(40, 40);
-            this.panelServiceStatus.TabIndex = 3;
+            panelServiceStatus.BackColor = Color.Red;
+            panelServiceStatus.BorderStyle = BorderStyle.FixedSingle;
+            panelServiceStatus.Location = new Point(460, 54);
+            panelServiceStatus.Name = "panelServiceStatus";
+            panelServiceStatus.Size = new Size(53, 59);
+            panelServiceStatus.TabIndex = 3;
             // 
             // labelServiceStatus
             // 
-            this.labelServiceStatus.AutoSize = true;
-            this.labelServiceStatus.Location = new System.Drawing.Point(403, 48);
-            this.labelServiceStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelServiceStatus.Name = "labelServiceStatus";
-            this.labelServiceStatus.Size = new System.Drawing.Size(104, 20);
-            this.labelServiceStatus.TabIndex = 2;
-            this.labelServiceStatus.Text = "Stato servizio";
+            labelServiceStatus.AutoSize = true;
+            labelServiceStatus.Location = new Point(537, 72);
+            labelServiceStatus.Name = "labelServiceStatus";
+            labelServiceStatus.Size = new Size(135, 30);
+            labelServiceStatus.TabIndex = 2;
+            labelServiceStatus.Text = "Stato servizio";
             // 
             // buttonStopService
             // 
-            this.buttonStopService.Location = new System.Drawing.Point(177, 35);
-            this.buttonStopService.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonStopService.Name = "buttonStopService";
-            this.buttonStopService.Size = new System.Drawing.Size(155, 45);
-            this.buttonStopService.TabIndex = 1;
-            this.buttonStopService.Text = "Arresta servizio";
-            this.buttonStopService.UseVisualStyleBackColor = true;
-            this.buttonStopService.Click += new System.EventHandler(this.buttonStopService_Click);
+            buttonStopService.Location = new Point(236, 52);
+            buttonStopService.Name = "buttonStopService";
+            buttonStopService.Size = new Size(207, 68);
+            buttonStopService.TabIndex = 1;
+            buttonStopService.Text = "Arresta servizio";
+            buttonStopService.UseVisualStyleBackColor = true;
+            buttonStopService.Click += buttonStopService_Click;
             // 
             // buttonStartService
             // 
-            this.buttonStartService.Location = new System.Drawing.Point(16, 35);
-            this.buttonStartService.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonStartService.Name = "buttonStartService";
-            this.buttonStartService.Size = new System.Drawing.Size(155, 45);
-            this.buttonStartService.TabIndex = 0;
-            this.buttonStartService.Text = "Avvia servizio";
-            this.buttonStartService.UseVisualStyleBackColor = true;
-            this.buttonStartService.Click += new System.EventHandler(this.buttonStartService_Click);
+            buttonStartService.Location = new Point(21, 52);
+            buttonStartService.Name = "buttonStartService";
+            buttonStartService.Size = new Size(207, 68);
+            buttonStartService.TabIndex = 0;
+            buttonStartService.Text = "Avvia servizio";
+            buttonStartService.UseVisualStyleBackColor = true;
+            buttonStartService.Click += buttonStartService_Click;
             // 
             // tabServerSettings
             // 
-            this.tabServerSettings.Controls.Add(this.tabPage1);
-            this.tabServerSettings.Controls.Add(this.tabPageSMTP);
-            this.tabServerSettings.Controls.Add(this.tabPageLogging);
-            this.tabServerSettings.Controls.Add(this.tabPageManageSettings);
-            this.tabServerSettings.Controls.Add(this.tabPageAbout);
-            this.tabServerSettings.Location = new System.Drawing.Point(11, 111);
-            this.tabServerSettings.Margin = new System.Windows.Forms.Padding(2);
-            this.tabServerSettings.Multiline = true;
-            this.tabServerSettings.Name = "tabServerSettings";
-            this.tabServerSettings.SelectedIndex = 0;
-            this.tabServerSettings.Size = new System.Drawing.Size(634, 766);
-            this.tabServerSettings.TabIndex = 1;
+            tabServerSettings.Controls.Add(tabPage1);
+            tabServerSettings.Controls.Add(tabPageLogging);
+            tabServerSettings.Controls.Add(tabPageManageSettings);
+            tabServerSettings.Controls.Add(tabPageAbout);
+            tabServerSettings.Location = new Point(15, 166);
+            tabServerSettings.Multiline = true;
+            tabServerSettings.Name = "tabServerSettings";
+            tabServerSettings.SelectedIndex = 0;
+            tabServerSettings.Size = new Size(845, 1149);
+            tabServerSettings.TabIndex = 1;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.buttonBrowseUploadPath);
-            this.tabPage1.Controls.Add(this.textBoxFileUploadPath);
-            this.tabPage1.Controls.Add(this.labelUploadFolderPath);
-            this.tabPage1.Controls.Add(this.buttonBrowseDBFolderPath);
-            this.tabPage1.Controls.Add(this.textBoxDatabasePath);
-            this.tabPage1.Controls.Add(this.numericUpDownServerPort);
-            this.tabPage1.Controls.Add(this.labelDBFilepath);
-            this.tabPage1.Controls.Add(this.labelServerPort);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(626, 733);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Server";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            tabPage1.Controls.Add(buttonBrowseUploadPath);
+            tabPage1.Controls.Add(textBoxFileUploadPath);
+            tabPage1.Controls.Add(labelUploadFolderPath);
+            tabPage1.Controls.Add(buttonBrowseDBFolderPath);
+            tabPage1.Controls.Add(textBoxDatabasePath);
+            tabPage1.Controls.Add(numericUpDownServerPort);
+            tabPage1.Controls.Add(labelDBFilepath);
+            tabPage1.Controls.Add(labelServerPort);
+            tabPage1.Location = new Point(4, 39);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(837, 1106);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "Server";
+            tabPage1.UseVisualStyleBackColor = true;
             // 
             // buttonBrowseUploadPath
             // 
-            this.buttonBrowseUploadPath.Location = new System.Drawing.Point(466, 271);
-            this.buttonBrowseUploadPath.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonBrowseUploadPath.Name = "buttonBrowseUploadPath";
-            this.buttonBrowseUploadPath.Size = new System.Drawing.Size(98, 30);
-            this.buttonBrowseUploadPath.TabIndex = 8;
-            this.buttonBrowseUploadPath.Text = "Sfoglia...";
-            this.buttonBrowseUploadPath.UseVisualStyleBackColor = true;
-            this.buttonBrowseUploadPath.Click += new System.EventHandler(this.buttonBrowseUploadPath_Click);
+            buttonBrowseUploadPath.Location = new Point(621, 406);
+            buttonBrowseUploadPath.Name = "buttonBrowseUploadPath";
+            buttonBrowseUploadPath.Size = new Size(131, 45);
+            buttonBrowseUploadPath.TabIndex = 8;
+            buttonBrowseUploadPath.Text = "Sfoglia...";
+            buttonBrowseUploadPath.UseVisualStyleBackColor = true;
+            buttonBrowseUploadPath.Click += buttonBrowseUploadPath_Click;
             // 
             // textBoxFileUploadPath
             // 
-            this.textBoxFileUploadPath.Location = new System.Drawing.Point(70, 273);
-            this.textBoxFileUploadPath.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxFileUploadPath.Name = "textBoxFileUploadPath";
-            this.textBoxFileUploadPath.Size = new System.Drawing.Size(366, 26);
-            this.textBoxFileUploadPath.TabIndex = 7;
+            textBoxFileUploadPath.Location = new Point(93, 410);
+            textBoxFileUploadPath.Name = "textBoxFileUploadPath";
+            textBoxFileUploadPath.Size = new Size(487, 35);
+            textBoxFileUploadPath.TabIndex = 7;
             // 
             // labelUploadFolderPath
             // 
-            this.labelUploadFolderPath.AutoSize = true;
-            this.labelUploadFolderPath.Location = new System.Drawing.Point(65, 244);
-            this.labelUploadFolderPath.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelUploadFolderPath.Name = "labelUploadFolderPath";
-            this.labelUploadFolderPath.Size = new System.Drawing.Size(175, 20);
-            this.labelUploadFolderPath.TabIndex = 6;
-            this.labelUploadFolderPath.Text = "Percorso File Database";
+            labelUploadFolderPath.AutoSize = true;
+            labelUploadFolderPath.Location = new Point(87, 366);
+            labelUploadFolderPath.Name = "labelUploadFolderPath";
+            labelUploadFolderPath.Size = new Size(222, 30);
+            labelUploadFolderPath.TabIndex = 6;
+            labelUploadFolderPath.Text = "Percorso File Database";
             // 
             // buttonBrowseDBFolderPath
             // 
-            this.buttonBrowseDBFolderPath.Location = new System.Drawing.Point(466, 147);
-            this.buttonBrowseDBFolderPath.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonBrowseDBFolderPath.Name = "buttonBrowseDBFolderPath";
-            this.buttonBrowseDBFolderPath.Size = new System.Drawing.Size(98, 30);
-            this.buttonBrowseDBFolderPath.TabIndex = 5;
-            this.buttonBrowseDBFolderPath.Text = "Sfoglia...";
-            this.buttonBrowseDBFolderPath.UseVisualStyleBackColor = true;
-            this.buttonBrowseDBFolderPath.Click += new System.EventHandler(this.buttonBrowseDBFolderPath_Click);
+            buttonBrowseDBFolderPath.Location = new Point(621, 220);
+            buttonBrowseDBFolderPath.Name = "buttonBrowseDBFolderPath";
+            buttonBrowseDBFolderPath.Size = new Size(131, 45);
+            buttonBrowseDBFolderPath.TabIndex = 5;
+            buttonBrowseDBFolderPath.Text = "Sfoglia...";
+            buttonBrowseDBFolderPath.UseVisualStyleBackColor = true;
+            buttonBrowseDBFolderPath.Click += buttonBrowseDBFolderPath_Click;
             // 
             // textBoxDatabasePath
             // 
-            this.textBoxDatabasePath.Location = new System.Drawing.Point(70, 149);
-            this.textBoxDatabasePath.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxDatabasePath.Name = "textBoxDatabasePath";
-            this.textBoxDatabasePath.Size = new System.Drawing.Size(366, 26);
-            this.textBoxDatabasePath.TabIndex = 4;
+            textBoxDatabasePath.Location = new Point(93, 224);
+            textBoxDatabasePath.Name = "textBoxDatabasePath";
+            textBoxDatabasePath.Size = new Size(487, 35);
+            textBoxDatabasePath.TabIndex = 4;
             // 
             // numericUpDownServerPort
             // 
-            this.numericUpDownServerPort.Location = new System.Drawing.Point(466, 41);
-            this.numericUpDownServerPort.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDownServerPort.Maximum = new decimal(new int[] {
-            65535,
-            0,
-            0,
-            0});
-            this.numericUpDownServerPort.Minimum = new decimal(new int[] {
-            1024,
-            0,
-            0,
-            0});
-            this.numericUpDownServerPort.Name = "numericUpDownServerPort";
-            this.numericUpDownServerPort.Size = new System.Drawing.Size(98, 26);
-            this.numericUpDownServerPort.TabIndex = 3;
-            this.numericUpDownServerPort.Value = new decimal(new int[] {
-            5051,
-            0,
-            0,
-            0});
+            numericUpDownServerPort.Location = new Point(621, 62);
+            numericUpDownServerPort.Maximum = new decimal(new int[] { 65535, 0, 0, 0 });
+            numericUpDownServerPort.Minimum = new decimal(new int[] { 1024, 0, 0, 0 });
+            numericUpDownServerPort.Name = "numericUpDownServerPort";
+            numericUpDownServerPort.Size = new Size(131, 35);
+            numericUpDownServerPort.TabIndex = 3;
+            numericUpDownServerPort.Value = new decimal(new int[] { 5051, 0, 0, 0 });
             // 
             // labelDBFilepath
             // 
-            this.labelDBFilepath.AutoSize = true;
-            this.labelDBFilepath.Location = new System.Drawing.Point(65, 126);
-            this.labelDBFilepath.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelDBFilepath.Name = "labelDBFilepath";
-            this.labelDBFilepath.Size = new System.Drawing.Size(175, 20);
-            this.labelDBFilepath.TabIndex = 1;
-            this.labelDBFilepath.Text = "Percorso File Database";
+            labelDBFilepath.AutoSize = true;
+            labelDBFilepath.Location = new Point(87, 189);
+            labelDBFilepath.Name = "labelDBFilepath";
+            labelDBFilepath.Size = new Size(222, 30);
+            labelDBFilepath.TabIndex = 1;
+            labelDBFilepath.Text = "Percorso File Database";
             // 
             // labelServerPort
             // 
-            this.labelServerPort.AutoSize = true;
-            this.labelServerPort.Location = new System.Drawing.Point(65, 41);
-            this.labelServerPort.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelServerPort.Name = "labelServerPort";
-            this.labelServerPort.Size = new System.Drawing.Size(97, 20);
-            this.labelServerPort.TabIndex = 0;
-            this.labelServerPort.Text = "Porta Server";
-            // 
-            // tabPageSMTP
-            // 
-            this.tabPageSMTP.Controls.Add(this.buttonSMTPTest);
-            this.tabPageSMTP.Controls.Add(this.checkBoxSMTPAuth);
-            this.tabPageSMTP.Controls.Add(this.checkBoxSSL);
-            this.tabPageSMTP.Controls.Add(this.textBoxSMTPPassword);
-            this.tabPageSMTP.Controls.Add(this.labelSMTPPassword);
-            this.tabPageSMTP.Controls.Add(this.textBoxSMTPUsername);
-            this.tabPageSMTP.Controls.Add(this.label3);
-            this.tabPageSMTP.Controls.Add(this.textBoxSMTPHost);
-            this.tabPageSMTP.Controls.Add(this.labelSMTPHost);
-            this.tabPageSMTP.Controls.Add(this.numericUpDownSMTPPort);
-            this.tabPageSMTP.Controls.Add(this.labelHostPort);
-            this.tabPageSMTP.Location = new System.Drawing.Point(4, 29);
-            this.tabPageSMTP.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPageSMTP.Name = "tabPageSMTP";
-            this.tabPageSMTP.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPageSMTP.Size = new System.Drawing.Size(626, 733);
-            this.tabPageSMTP.TabIndex = 1;
-            this.tabPageSMTP.Text = "SMTP";
-            this.tabPageSMTP.UseVisualStyleBackColor = true;
-            // 
-            // buttonSMTPTest
-            // 
-            this.buttonSMTPTest.Location = new System.Drawing.Point(229, 432);
-            this.buttonSMTPTest.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonSMTPTest.Name = "buttonSMTPTest";
-            this.buttonSMTPTest.Size = new System.Drawing.Size(155, 45);
-            this.buttonSMTPTest.TabIndex = 14;
-            this.buttonSMTPTest.Text = "Verifica";
-            this.buttonSMTPTest.UseVisualStyleBackColor = true;
-            this.buttonSMTPTest.Click += new System.EventHandler(this.buttonSMTPTest_Click);
-            // 
-            // checkBoxSMTPAuth
-            // 
-            this.checkBoxSMTPAuth.AutoSize = true;
-            this.checkBoxSMTPAuth.Checked = true;
-            this.checkBoxSMTPAuth.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxSMTPAuth.Location = new System.Drawing.Point(357, 364);
-            this.checkBoxSMTPAuth.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBoxSMTPAuth.Name = "checkBoxSMTPAuth";
-            this.checkBoxSMTPAuth.Size = new System.Drawing.Size(207, 24);
-            this.checkBoxSMTPAuth.TabIndex = 13;
-            this.checkBoxSMTPAuth.Text = "Richiede Autenticazione";
-            this.checkBoxSMTPAuth.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxSSL
-            // 
-            this.checkBoxSSL.AutoSize = true;
-            this.checkBoxSSL.Checked = true;
-            this.checkBoxSSL.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxSSL.Location = new System.Drawing.Point(69, 364);
-            this.checkBoxSSL.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBoxSSL.Name = "checkBoxSSL";
-            this.checkBoxSSL.Size = new System.Drawing.Size(165, 24);
-            this.checkBoxSSL.TabIndex = 12;
-            this.checkBoxSSL.Text = "Richiede TLS/SSL";
-            this.checkBoxSSL.UseVisualStyleBackColor = true;
-            // 
-            // textBoxSMTPPassword
-            // 
-            this.textBoxSMTPPassword.Location = new System.Drawing.Point(69, 284);
-            this.textBoxSMTPPassword.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxSMTPPassword.Name = "textBoxSMTPPassword";
-            this.textBoxSMTPPassword.Size = new System.Drawing.Size(491, 26);
-            this.textBoxSMTPPassword.TabIndex = 11;
-            this.textBoxSMTPPassword.UseSystemPasswordChar = true;
-            // 
-            // labelSMTPPassword
-            // 
-            this.labelSMTPPassword.AutoSize = true;
-            this.labelSMTPPassword.Location = new System.Drawing.Point(65, 261);
-            this.labelSMTPPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelSMTPPassword.Name = "labelSMTPPassword";
-            this.labelSMTPPassword.Size = new System.Drawing.Size(125, 20);
-            this.labelSMTPPassword.TabIndex = 10;
-            this.labelSMTPPassword.Text = "SMTP Password";
-            // 
-            // textBoxSMTPUsername
-            // 
-            this.textBoxSMTPUsername.Location = new System.Drawing.Point(69, 201);
-            this.textBoxSMTPUsername.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxSMTPUsername.Name = "textBoxSMTPUsername";
-            this.textBoxSMTPUsername.Size = new System.Drawing.Size(491, 26);
-            this.textBoxSMTPUsername.TabIndex = 9;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(65, 178);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 20);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "SMTP Username";
-            // 
-            // textBoxSMTPHost
-            // 
-            this.textBoxSMTPHost.Location = new System.Drawing.Point(69, 71);
-            this.textBoxSMTPHost.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxSMTPHost.Name = "textBoxSMTPHost";
-            this.textBoxSMTPHost.Size = new System.Drawing.Size(491, 26);
-            this.textBoxSMTPHost.TabIndex = 7;
-            // 
-            // labelSMTPHost
-            // 
-            this.labelSMTPHost.AutoSize = true;
-            this.labelSMTPHost.Location = new System.Drawing.Point(65, 48);
-            this.labelSMTPHost.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelSMTPHost.Name = "labelSMTPHost";
-            this.labelSMTPHost.Size = new System.Drawing.Size(90, 20);
-            this.labelSMTPHost.TabIndex = 6;
-            this.labelSMTPHost.Text = "SMTP Host";
-            // 
-            // numericUpDownSMTPPort
-            // 
-            this.numericUpDownSMTPPort.Location = new System.Drawing.Point(461, 125);
-            this.numericUpDownSMTPPort.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDownSMTPPort.Maximum = new decimal(new int[] {
-            65535,
-            0,
-            0,
-            0});
-            this.numericUpDownSMTPPort.Minimum = new decimal(new int[] {
-            25,
-            0,
-            0,
-            0});
-            this.numericUpDownSMTPPort.Name = "numericUpDownSMTPPort";
-            this.numericUpDownSMTPPort.Size = new System.Drawing.Size(98, 26);
-            this.numericUpDownSMTPPort.TabIndex = 5;
-            this.numericUpDownSMTPPort.Value = new decimal(new int[] {
-            587,
-            0,
-            0,
-            0});
-            // 
-            // labelHostPort
-            // 
-            this.labelHostPort.AutoSize = true;
-            this.labelHostPort.Location = new System.Drawing.Point(65, 127);
-            this.labelHostPort.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelHostPort.Name = "labelHostPort";
-            this.labelHostPort.Size = new System.Drawing.Size(135, 20);
-            this.labelHostPort.TabIndex = 4;
-            this.labelHostPort.Text = "Porta Server Host";
+            labelServerPort.AutoSize = true;
+            labelServerPort.Location = new Point(87, 62);
+            labelServerPort.Name = "labelServerPort";
+            labelServerPort.Size = new Size(124, 30);
+            labelServerPort.TabIndex = 0;
+            labelServerPort.Text = "Porta Server";
             // 
             // tabPageLogging
             // 
-            this.tabPageLogging.Controls.Add(this.buttonBrowseLoggingPath);
-            this.tabPageLogging.Controls.Add(this.textBoxLogPath);
-            this.tabPageLogging.Controls.Add(this.labelLoggingPath);
-            this.tabPageLogging.Controls.Add(this.comboBoxLogLevel);
-            this.tabPageLogging.Controls.Add(this.labelLoggingLevel);
-            this.tabPageLogging.Location = new System.Drawing.Point(4, 29);
-            this.tabPageLogging.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPageLogging.Name = "tabPageLogging";
-            this.tabPageLogging.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPageLogging.Size = new System.Drawing.Size(626, 733);
-            this.tabPageLogging.TabIndex = 2;
-            this.tabPageLogging.Text = "Logging";
-            this.tabPageLogging.UseVisualStyleBackColor = true;
+            tabPageLogging.Controls.Add(buttonBrowseLoggingPath);
+            tabPageLogging.Controls.Add(textBoxLogPath);
+            tabPageLogging.Controls.Add(labelLoggingPath);
+            tabPageLogging.Location = new Point(4, 39);
+            tabPageLogging.Name = "tabPageLogging";
+            tabPageLogging.Padding = new Padding(3);
+            tabPageLogging.Size = new Size(837, 1106);
+            tabPageLogging.TabIndex = 2;
+            tabPageLogging.Text = "Logging";
+            tabPageLogging.UseVisualStyleBackColor = true;
             // 
             // buttonBrowseLoggingPath
             // 
-            this.buttonBrowseLoggingPath.Location = new System.Drawing.Point(469, 156);
-            this.buttonBrowseLoggingPath.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonBrowseLoggingPath.Name = "buttonBrowseLoggingPath";
-            this.buttonBrowseLoggingPath.Size = new System.Drawing.Size(98, 30);
-            this.buttonBrowseLoggingPath.TabIndex = 8;
-            this.buttonBrowseLoggingPath.Text = "Sfoglia...";
-            this.buttonBrowseLoggingPath.UseVisualStyleBackColor = true;
-            this.buttonBrowseLoggingPath.Click += new System.EventHandler(this.buttonBrowseLoggingPath_Click);
+            buttonBrowseLoggingPath.Location = new Point(619, 132);
+            buttonBrowseLoggingPath.Name = "buttonBrowseLoggingPath";
+            buttonBrowseLoggingPath.Size = new Size(131, 45);
+            buttonBrowseLoggingPath.TabIndex = 8;
+            buttonBrowseLoggingPath.Text = "Sfoglia...";
+            buttonBrowseLoggingPath.UseVisualStyleBackColor = true;
+            buttonBrowseLoggingPath.Click += buttonBrowseLoggingPath_Click;
             // 
             // textBoxLogPath
             // 
-            this.textBoxLogPath.Location = new System.Drawing.Point(73, 158);
-            this.textBoxLogPath.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxLogPath.Name = "textBoxLogPath";
-            this.textBoxLogPath.Size = new System.Drawing.Size(366, 26);
-            this.textBoxLogPath.TabIndex = 7;
+            textBoxLogPath.Location = new Point(91, 135);
+            textBoxLogPath.Name = "textBoxLogPath";
+            textBoxLogPath.Size = new Size(487, 35);
+            textBoxLogPath.TabIndex = 7;
             // 
             // labelLoggingPath
             // 
-            this.labelLoggingPath.AutoSize = true;
-            this.labelLoggingPath.Location = new System.Drawing.Point(69, 135);
-            this.labelLoggingPath.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelLoggingPath.Name = "labelLoggingPath";
-            this.labelLoggingPath.Size = new System.Drawing.Size(148, 20);
-            this.labelLoggingPath.TabIndex = 6;
-            this.labelLoggingPath.Text = "Percorso File di Log";
-            // 
-            // comboBoxLogLevel
-            // 
-            this.comboBoxLogLevel.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxLogLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxLogLevel.FormattingEnabled = true;
-            this.comboBoxLogLevel.Items.AddRange(new object[] {
-            "Verbose",
-            "Warning",
-            "Error"});
-            this.comboBoxLogLevel.Location = new System.Drawing.Point(358, 53);
-            this.comboBoxLogLevel.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxLogLevel.Name = "comboBoxLogLevel";
-            this.comboBoxLogLevel.Size = new System.Drawing.Size(210, 28);
-            this.comboBoxLogLevel.TabIndex = 1;
-            // 
-            // labelLoggingLevel
-            // 
-            this.labelLoggingLevel.AutoSize = true;
-            this.labelLoggingLevel.Location = new System.Drawing.Point(69, 53);
-            this.labelLoggingLevel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelLoggingLevel.Name = "labelLoggingLevel";
-            this.labelLoggingLevel.Size = new System.Drawing.Size(113, 20);
-            this.labelLoggingLevel.TabIndex = 0;
-            this.labelLoggingLevel.Text = "Livello Logging";
+            labelLoggingPath.AutoSize = true;
+            labelLoggingPath.Location = new Point(86, 100);
+            labelLoggingPath.Name = "labelLoggingPath";
+            labelLoggingPath.Size = new Size(192, 30);
+            labelLoggingPath.TabIndex = 6;
+            labelLoggingPath.Text = "Percorso File di Log";
             // 
             // tabPageManageSettings
             // 
-            this.tabPageManageSettings.Controls.Add(this.groupBoxReset);
-            this.tabPageManageSettings.Controls.Add(this.groupBoxImportSettings);
-            this.tabPageManageSettings.Controls.Add(this.groupBoxExportSettings);
-            this.tabPageManageSettings.Location = new System.Drawing.Point(4, 29);
-            this.tabPageManageSettings.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPageManageSettings.Name = "tabPageManageSettings";
-            this.tabPageManageSettings.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPageManageSettings.Size = new System.Drawing.Size(626, 733);
-            this.tabPageManageSettings.TabIndex = 3;
-            this.tabPageManageSettings.Text = "Gestione Impostazioni";
-            this.tabPageManageSettings.UseVisualStyleBackColor = true;
+            tabPageManageSettings.Controls.Add(groupBoxReset);
+            tabPageManageSettings.Controls.Add(groupBoxImportSettings);
+            tabPageManageSettings.Controls.Add(groupBoxExportSettings);
+            tabPageManageSettings.Location = new Point(4, 39);
+            tabPageManageSettings.Name = "tabPageManageSettings";
+            tabPageManageSettings.Padding = new Padding(3);
+            tabPageManageSettings.Size = new Size(837, 1106);
+            tabPageManageSettings.TabIndex = 3;
+            tabPageManageSettings.Text = "Gestione Impostazioni";
+            tabPageManageSettings.UseVisualStyleBackColor = true;
             // 
             // groupBoxReset
             // 
-            this.groupBoxReset.Controls.Add(this.labelResetSettings);
-            this.groupBoxReset.Controls.Add(this.buttonResetSettings);
-            this.groupBoxReset.Location = new System.Drawing.Point(16, 621);
-            this.groupBoxReset.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBoxReset.Name = "groupBoxReset";
-            this.groupBoxReset.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxReset.Size = new System.Drawing.Size(594, 108);
-            this.groupBoxReset.TabIndex = 2;
-            this.groupBoxReset.TabStop = false;
-            this.groupBoxReset.Text = "Reset";
+            groupBoxReset.Controls.Add(labelResetSettings);
+            groupBoxReset.Controls.Add(buttonResetSettings);
+            groupBoxReset.Location = new Point(21, 932);
+            groupBoxReset.Name = "groupBoxReset";
+            groupBoxReset.Size = new Size(792, 162);
+            groupBoxReset.TabIndex = 2;
+            groupBoxReset.TabStop = false;
+            groupBoxReset.Text = "Reset";
             // 
             // labelResetSettings
             // 
-            this.labelResetSettings.AutoSize = true;
-            this.labelResetSettings.Location = new System.Drawing.Point(5, 49);
-            this.labelResetSettings.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelResetSettings.Name = "labelResetSettings";
-            this.labelResetSettings.Size = new System.Drawing.Size(252, 20);
-            this.labelResetSettings.TabIndex = 2;
-            this.labelResetSettings.Text = "Ripristina le impostazioni di default";
+            labelResetSettings.AutoSize = true;
+            labelResetSettings.Location = new Point(7, 74);
+            labelResetSettings.Name = "labelResetSettings";
+            labelResetSettings.Size = new Size(339, 30);
+            labelResetSettings.TabIndex = 2;
+            labelResetSettings.Text = "Ripristina le impostazioni di default";
             // 
             // buttonResetSettings
             // 
-            this.buttonResetSettings.BackColor = System.Drawing.Color.Red;
-            this.buttonResetSettings.ForeColor = System.Drawing.Color.White;
-            this.buttonResetSettings.Location = new System.Drawing.Point(434, 37);
-            this.buttonResetSettings.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonResetSettings.Name = "buttonResetSettings";
-            this.buttonResetSettings.Size = new System.Drawing.Size(155, 45);
-            this.buttonResetSettings.TabIndex = 1;
-            this.buttonResetSettings.Text = "Ripristina";
-            this.buttonResetSettings.UseVisualStyleBackColor = false;
-            this.buttonResetSettings.Click += new System.EventHandler(this.buttonResetSettings_Click);
+            buttonResetSettings.BackColor = Color.Red;
+            buttonResetSettings.ForeColor = Color.White;
+            buttonResetSettings.Location = new Point(579, 56);
+            buttonResetSettings.Name = "buttonResetSettings";
+            buttonResetSettings.Size = new Size(207, 68);
+            buttonResetSettings.TabIndex = 1;
+            buttonResetSettings.Text = "Ripristina";
+            buttonResetSettings.UseVisualStyleBackColor = false;
+            buttonResetSettings.Click += buttonResetSettings_Click;
             // 
             // groupBoxImportSettings
             // 
-            this.groupBoxImportSettings.Controls.Add(this.buttonDiscardImportedSettings);
-            this.groupBoxImportSettings.Controls.Add(this.buttonApplyImportedSettings);
-            this.groupBoxImportSettings.Controls.Add(this.labelSettingsPreview);
-            this.groupBoxImportSettings.Controls.Add(this.textBoxPreview);
-            this.groupBoxImportSettings.Controls.Add(this.labelImportSettings);
-            this.groupBoxImportSettings.Controls.Add(this.buttonImportSettings);
-            this.groupBoxImportSettings.Location = new System.Drawing.Point(16, 138);
-            this.groupBoxImportSettings.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBoxImportSettings.Name = "groupBoxImportSettings";
-            this.groupBoxImportSettings.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxImportSettings.Size = new System.Drawing.Size(594, 479);
-            this.groupBoxImportSettings.TabIndex = 1;
-            this.groupBoxImportSettings.TabStop = false;
-            this.groupBoxImportSettings.Text = "Importa";
+            groupBoxImportSettings.Controls.Add(buttonDiscardImportedSettings);
+            groupBoxImportSettings.Controls.Add(buttonApplyImportedSettings);
+            groupBoxImportSettings.Controls.Add(labelSettingsPreview);
+            groupBoxImportSettings.Controls.Add(textBoxPreview);
+            groupBoxImportSettings.Controls.Add(labelImportSettings);
+            groupBoxImportSettings.Controls.Add(buttonImportSettings);
+            groupBoxImportSettings.Location = new Point(21, 207);
+            groupBoxImportSettings.Name = "groupBoxImportSettings";
+            groupBoxImportSettings.Size = new Size(792, 718);
+            groupBoxImportSettings.TabIndex = 1;
+            groupBoxImportSettings.TabStop = false;
+            groupBoxImportSettings.Text = "Importa";
             // 
             // buttonDiscardImportedSettings
             // 
-            this.buttonDiscardImportedSettings.Enabled = false;
-            this.buttonDiscardImportedSettings.Location = new System.Drawing.Point(316, 421);
-            this.buttonDiscardImportedSettings.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonDiscardImportedSettings.Name = "buttonDiscardImportedSettings";
-            this.buttonDiscardImportedSettings.Size = new System.Drawing.Size(155, 45);
-            this.buttonDiscardImportedSettings.TabIndex = 6;
-            this.buttonDiscardImportedSettings.Text = "Scarta";
-            this.buttonDiscardImportedSettings.UseVisualStyleBackColor = true;
-            this.buttonDiscardImportedSettings.Click += new System.EventHandler(this.buttonDiscardImportedSettings_Click);
+            buttonDiscardImportedSettings.Enabled = false;
+            buttonDiscardImportedSettings.Location = new Point(421, 632);
+            buttonDiscardImportedSettings.Name = "buttonDiscardImportedSettings";
+            buttonDiscardImportedSettings.Size = new Size(207, 68);
+            buttonDiscardImportedSettings.TabIndex = 6;
+            buttonDiscardImportedSettings.Text = "Scarta";
+            buttonDiscardImportedSettings.UseVisualStyleBackColor = true;
+            buttonDiscardImportedSettings.Click += buttonDiscardImportedSettings_Click;
             // 
             // buttonApplyImportedSettings
             // 
-            this.buttonApplyImportedSettings.Enabled = false;
-            this.buttonApplyImportedSettings.Location = new System.Drawing.Point(122, 421);
-            this.buttonApplyImportedSettings.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonApplyImportedSettings.Name = "buttonApplyImportedSettings";
-            this.buttonApplyImportedSettings.Size = new System.Drawing.Size(155, 45);
-            this.buttonApplyImportedSettings.TabIndex = 5;
-            this.buttonApplyImportedSettings.Text = "Applica";
-            this.buttonApplyImportedSettings.UseVisualStyleBackColor = true;
-            this.buttonApplyImportedSettings.Click += new System.EventHandler(this.buttonApplyImportedSettings_Click);
+            buttonApplyImportedSettings.Enabled = false;
+            buttonApplyImportedSettings.Location = new Point(163, 632);
+            buttonApplyImportedSettings.Name = "buttonApplyImportedSettings";
+            buttonApplyImportedSettings.Size = new Size(207, 68);
+            buttonApplyImportedSettings.TabIndex = 5;
+            buttonApplyImportedSettings.Text = "Applica";
+            buttonApplyImportedSettings.UseVisualStyleBackColor = true;
+            buttonApplyImportedSettings.Click += buttonApplyImportedSettings_Click;
             // 
             // labelSettingsPreview
             // 
-            this.labelSettingsPreview.AutoSize = true;
-            this.labelSettingsPreview.Location = new System.Drawing.Point(5, 102);
-            this.labelSettingsPreview.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelSettingsPreview.Name = "labelSettingsPreview";
-            this.labelSettingsPreview.Size = new System.Drawing.Size(174, 20);
-            this.labelSettingsPreview.TabIndex = 4;
-            this.labelSettingsPreview.Text = "Anteprima impostazioni";
+            labelSettingsPreview.AutoSize = true;
+            labelSettingsPreview.Location = new Point(7, 153);
+            labelSettingsPreview.Name = "labelSettingsPreview";
+            labelSettingsPreview.Size = new Size(234, 30);
+            labelSettingsPreview.TabIndex = 4;
+            labelSettingsPreview.Text = "Anteprima impostazioni";
             // 
             // textBoxPreview
             // 
-            this.textBoxPreview.Location = new System.Drawing.Point(9, 138);
-            this.textBoxPreview.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxPreview.Multiline = true;
-            this.textBoxPreview.Name = "textBoxPreview";
-            this.textBoxPreview.ReadOnly = true;
-            this.textBoxPreview.Size = new System.Drawing.Size(581, 279);
-            this.textBoxPreview.TabIndex = 3;
+            textBoxPreview.Location = new Point(12, 207);
+            textBoxPreview.Multiline = true;
+            textBoxPreview.Name = "textBoxPreview";
+            textBoxPreview.ReadOnly = true;
+            textBoxPreview.Size = new Size(773, 416);
+            textBoxPreview.TabIndex = 3;
             // 
             // labelImportSettings
             // 
-            this.labelImportSettings.AutoSize = true;
-            this.labelImportSettings.Location = new System.Drawing.Point(5, 49);
-            this.labelImportSettings.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelImportSettings.Name = "labelImportSettings";
-            this.labelImportSettings.Size = new System.Drawing.Size(286, 20);
-            this.labelImportSettings.TabIndex = 2;
-            this.labelImportSettings.Text = "Importa le impostazioni da un file JSON";
+            labelImportSettings.AutoSize = true;
+            labelImportSettings.Location = new Point(7, 74);
+            labelImportSettings.Name = "labelImportSettings";
+            labelImportSettings.Size = new Size(382, 30);
+            labelImportSettings.TabIndex = 2;
+            labelImportSettings.Text = "Importa le impostazioni da un file JSON";
             // 
             // buttonImportSettings
             // 
-            this.buttonImportSettings.Location = new System.Drawing.Point(434, 37);
-            this.buttonImportSettings.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonImportSettings.Name = "buttonImportSettings";
-            this.buttonImportSettings.Size = new System.Drawing.Size(155, 45);
-            this.buttonImportSettings.TabIndex = 1;
-            this.buttonImportSettings.Text = "Importa";
-            this.buttonImportSettings.UseVisualStyleBackColor = true;
-            this.buttonImportSettings.Click += new System.EventHandler(this.buttonImportSettings_Click);
+            buttonImportSettings.Location = new Point(579, 56);
+            buttonImportSettings.Name = "buttonImportSettings";
+            buttonImportSettings.Size = new Size(207, 68);
+            buttonImportSettings.TabIndex = 1;
+            buttonImportSettings.Text = "Importa";
+            buttonImportSettings.UseVisualStyleBackColor = true;
+            buttonImportSettings.Click += buttonImportSettings_Click;
             // 
             // groupBoxExportSettings
             // 
-            this.groupBoxExportSettings.Controls.Add(this.labelExportSettings);
-            this.groupBoxExportSettings.Controls.Add(this.buttonExportSettings);
-            this.groupBoxExportSettings.Location = new System.Drawing.Point(16, 26);
-            this.groupBoxExportSettings.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBoxExportSettings.Name = "groupBoxExportSettings";
-            this.groupBoxExportSettings.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxExportSettings.Size = new System.Drawing.Size(594, 108);
-            this.groupBoxExportSettings.TabIndex = 0;
-            this.groupBoxExportSettings.TabStop = false;
-            this.groupBoxExportSettings.Text = "Esporta";
+            groupBoxExportSettings.Controls.Add(labelExportSettings);
+            groupBoxExportSettings.Controls.Add(buttonExportSettings);
+            groupBoxExportSettings.Location = new Point(21, 39);
+            groupBoxExportSettings.Name = "groupBoxExportSettings";
+            groupBoxExportSettings.Size = new Size(792, 162);
+            groupBoxExportSettings.TabIndex = 0;
+            groupBoxExportSettings.TabStop = false;
+            groupBoxExportSettings.Text = "Esporta";
             // 
             // labelExportSettings
             // 
-            this.labelExportSettings.AutoSize = true;
-            this.labelExportSettings.Location = new System.Drawing.Point(5, 49);
-            this.labelExportSettings.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelExportSettings.Name = "labelExportSettings";
-            this.labelExportSettings.Size = new System.Drawing.Size(328, 20);
-            this.labelExportSettings.TabIndex = 2;
-            this.labelExportSettings.Text = "Esporte le impostazioni attuali in un file JSON";
+            labelExportSettings.AutoSize = true;
+            labelExportSettings.Location = new Point(7, 74);
+            labelExportSettings.Name = "labelExportSettings";
+            labelExportSettings.Size = new Size(436, 30);
+            labelExportSettings.TabIndex = 2;
+            labelExportSettings.Text = "Esporte le impostazioni attuali in un file JSON";
             // 
             // buttonExportSettings
             // 
-            this.buttonExportSettings.Location = new System.Drawing.Point(434, 37);
-            this.buttonExportSettings.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonExportSettings.Name = "buttonExportSettings";
-            this.buttonExportSettings.Size = new System.Drawing.Size(155, 45);
-            this.buttonExportSettings.TabIndex = 1;
-            this.buttonExportSettings.Text = "Esporta";
-            this.buttonExportSettings.UseVisualStyleBackColor = true;
-            this.buttonExportSettings.Click += new System.EventHandler(this.buttonExportSettings_Click);
+            buttonExportSettings.Location = new Point(579, 56);
+            buttonExportSettings.Name = "buttonExportSettings";
+            buttonExportSettings.Size = new Size(207, 68);
+            buttonExportSettings.TabIndex = 1;
+            buttonExportSettings.Text = "Esporta";
+            buttonExportSettings.UseVisualStyleBackColor = true;
+            buttonExportSettings.Click += buttonExportSettings_Click;
             // 
             // tabPageAbout
             // 
-            this.tabPageAbout.Controls.Add(this.groupBoxAbout);
-            this.tabPageAbout.Controls.Add(this.richTextBoxLicense);
-            this.tabPageAbout.Location = new System.Drawing.Point(4, 29);
-            this.tabPageAbout.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPageAbout.Name = "tabPageAbout";
-            this.tabPageAbout.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPageAbout.Size = new System.Drawing.Size(626, 733);
-            this.tabPageAbout.TabIndex = 4;
-            this.tabPageAbout.Text = "About";
-            this.tabPageAbout.UseVisualStyleBackColor = true;
-            // 
-            // buttonExit
-            // 
-            this.buttonExit.Location = new System.Drawing.Point(347, 881);
-            this.buttonExit.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(155, 45);
-            this.buttonExit.TabIndex = 3;
-            this.buttonExit.Text = "Esci";
-            this.buttonExit.UseVisualStyleBackColor = true;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
-            // 
-            // buttonSave
-            // 
-            this.buttonSave.Location = new System.Drawing.Point(153, 881);
-            this.buttonSave.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(155, 45);
-            this.buttonSave.TabIndex = 2;
-            this.buttonSave.Text = "Salva";
-            this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
-            // 
-            // openFileDialog
-            // 
-            this.openFileDialog.FileName = "openFileDialog1";
-            // 
-            // richTextBoxLicense
-            // 
-            this.richTextBoxLicense.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.richTextBoxLicense.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBoxLicense.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.richTextBoxLicense.Location = new System.Drawing.Point(15, 167);
-            this.richTextBoxLicense.Name = "richTextBoxLicense";
-            this.richTextBoxLicense.ReadOnly = true;
-            this.richTextBoxLicense.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.richTextBoxLicense.Size = new System.Drawing.Size(593, 539);
-            this.richTextBoxLicense.TabIndex = 2;
-            this.richTextBoxLicense.Text = "";
+            tabPageAbout.Controls.Add(groupBoxAbout);
+            tabPageAbout.Controls.Add(richTextBoxLicense);
+            tabPageAbout.Location = new Point(4, 39);
+            tabPageAbout.Name = "tabPageAbout";
+            tabPageAbout.Padding = new Padding(3);
+            tabPageAbout.Size = new Size(837, 1106);
+            tabPageAbout.TabIndex = 4;
+            tabPageAbout.Text = "About";
+            tabPageAbout.UseVisualStyleBackColor = true;
             // 
             // groupBoxAbout
             // 
-            this.groupBoxAbout.Controls.Add(this.labelHealthGearVersion);
-            this.groupBoxAbout.Controls.Add(this.labelSoftwareVersion);
-            this.groupBoxAbout.Controls.Add(this.labelSoftwareName);
-            this.groupBoxAbout.Location = new System.Drawing.Point(15, 0);
-            this.groupBoxAbout.Name = "groupBoxAbout";
-            this.groupBoxAbout.Size = new System.Drawing.Size(593, 161);
-            this.groupBoxAbout.TabIndex = 3;
-            this.groupBoxAbout.TabStop = false;
+            groupBoxAbout.Controls.Add(labelHealthGearVersion);
+            groupBoxAbout.Controls.Add(labelSoftwareVersion);
+            groupBoxAbout.Controls.Add(labelSoftwareName);
+            groupBoxAbout.Location = new Point(20, 0);
+            groupBoxAbout.Margin = new Padding(4);
+            groupBoxAbout.Name = "groupBoxAbout";
+            groupBoxAbout.Padding = new Padding(4);
+            groupBoxAbout.Size = new Size(791, 242);
+            groupBoxAbout.TabIndex = 3;
+            groupBoxAbout.TabStop = false;
             // 
             // labelHealthGearVersion
             // 
-            this.labelHealthGearVersion.AutoSize = true;
-            this.labelHealthGearVersion.Location = new System.Drawing.Point(9, 108);
-            this.labelHealthGearVersion.Name = "labelHealthGearVersion";
-            this.labelHealthGearVersion.Size = new System.Drawing.Size(146, 20);
-            this.labelHealthGearVersion.TabIndex = 6;
-            this.labelHealthGearVersion.Text = "HealthGearVersion";
-            this.labelHealthGearVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            labelHealthGearVersion.AutoSize = true;
+            labelHealthGearVersion.Location = new Point(12, 162);
+            labelHealthGearVersion.Margin = new Padding(4, 0, 4, 0);
+            labelHealthGearVersion.Name = "labelHealthGearVersion";
+            labelHealthGearVersion.Size = new Size(185, 30);
+            labelHealthGearVersion.TabIndex = 6;
+            labelHealthGearVersion.Text = "HealthGearVersion";
+            labelHealthGearVersion.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // labelSoftwareVersion
             // 
-            this.labelSoftwareVersion.AutoSize = true;
-            this.labelSoftwareVersion.Location = new System.Drawing.Point(9, 78);
-            this.labelSoftwareVersion.Name = "labelSoftwareVersion";
-            this.labelSoftwareVersion.Size = new System.Drawing.Size(127, 20);
-            this.labelSoftwareVersion.TabIndex = 5;
-            this.labelSoftwareVersion.Text = "SoftwareVersion";
-            this.labelSoftwareVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            labelSoftwareVersion.AutoSize = true;
+            labelSoftwareVersion.Location = new Point(12, 117);
+            labelSoftwareVersion.Margin = new Padding(4, 0, 4, 0);
+            labelSoftwareVersion.Name = "labelSoftwareVersion";
+            labelSoftwareVersion.Size = new Size(162, 30);
+            labelSoftwareVersion.TabIndex = 5;
+            labelSoftwareVersion.Text = "SoftwareVersion";
+            labelSoftwareVersion.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // labelSoftwareName
             // 
-            this.labelSoftwareName.AutoSize = true;
-            this.labelSoftwareName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSoftwareName.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.labelSoftwareName.Location = new System.Drawing.Point(6, 22);
-            this.labelSoftwareName.Name = "labelSoftwareName";
-            this.labelSoftwareName.Size = new System.Drawing.Size(332, 40);
-            this.labelSoftwareName.TabIndex = 4;
-            this.labelSoftwareName.Text = "HealthGear Config";
-            this.labelSoftwareName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            labelSoftwareName.AutoSize = true;
+            labelSoftwareName.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelSoftwareName.ForeColor = Color.DodgerBlue;
+            labelSoftwareName.Location = new Point(8, 33);
+            labelSoftwareName.Margin = new Padding(4, 0, 4, 0);
+            labelSoftwareName.Name = "labelSoftwareName";
+            labelSoftwareName.Size = new Size(383, 48);
+            labelSoftwareName.TabIndex = 4;
+            labelSoftwareName.Text = "HealthGear Config";
+            labelSoftwareName.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // richTextBoxLicense
+            // 
+            richTextBoxLicense.BackColor = SystemColors.ControlLightLight;
+            richTextBoxLicense.BorderStyle = BorderStyle.None;
+            richTextBoxLicense.Cursor = Cursors.IBeam;
+            richTextBoxLicense.Location = new Point(20, 250);
+            richTextBoxLicense.Margin = new Padding(4);
+            richTextBoxLicense.Name = "richTextBoxLicense";
+            richTextBoxLicense.ReadOnly = true;
+            richTextBoxLicense.ScrollBars = RichTextBoxScrollBars.Vertical;
+            richTextBoxLicense.Size = new Size(791, 808);
+            richTextBoxLicense.TabIndex = 2;
+            richTextBoxLicense.Text = "";
+            // 
+            // buttonExit
+            // 
+            buttonExit.Location = new Point(463, 1322);
+            buttonExit.Name = "buttonExit";
+            buttonExit.Size = new Size(207, 68);
+            buttonExit.TabIndex = 3;
+            buttonExit.Text = "Esci";
+            buttonExit.UseVisualStyleBackColor = true;
+            buttonExit.Click += buttonExit_Click;
+            // 
+            // buttonSave
+            // 
+            buttonSave.Location = new Point(204, 1322);
+            buttonSave.Name = "buttonSave";
+            buttonSave.Size = new Size(207, 68);
+            buttonSave.TabIndex = 2;
+            buttonSave.Text = "Salva";
+            buttonSave.UseVisualStyleBackColor = true;
+            buttonSave.Click += buttonSave_Click;
+            // 
+            // openFileDialog
+            // 
+            openFileDialog.FileName = "openFileDialog1";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(655, 937);
-            this.Controls.Add(this.buttonExit);
-            this.Controls.Add(this.buttonSave);
-            this.Controls.Add(this.tabServerSettings);
-            this.Controls.Add(this.groupBoxServiceStatus);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.MaximizeBox = false;
-            this.Name = "MainForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.groupBoxServiceStatus.ResumeLayout(false);
-            this.groupBoxServiceStatus.PerformLayout();
-            this.tabServerSettings.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownServerPort)).EndInit();
-            this.tabPageSMTP.ResumeLayout(false);
-            this.tabPageSMTP.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSMTPPort)).EndInit();
-            this.tabPageLogging.ResumeLayout(false);
-            this.tabPageLogging.PerformLayout();
-            this.tabPageManageSettings.ResumeLayout(false);
-            this.groupBoxReset.ResumeLayout(false);
-            this.groupBoxReset.PerformLayout();
-            this.groupBoxImportSettings.ResumeLayout(false);
-            this.groupBoxImportSettings.PerformLayout();
-            this.groupBoxExportSettings.ResumeLayout(false);
-            this.groupBoxExportSettings.PerformLayout();
-            this.tabPageAbout.ResumeLayout(false);
-            this.groupBoxAbout.ResumeLayout(false);
-            this.groupBoxAbout.PerformLayout();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
+            ClientSize = new Size(873, 1406);
+            Controls.Add(buttonExit);
+            Controls.Add(buttonSave);
+            Controls.Add(tabServerSettings);
+            Controls.Add(groupBoxServiceStatus);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            Name = "MainForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Form1";
+            groupBoxServiceStatus.ResumeLayout(false);
+            groupBoxServiceStatus.PerformLayout();
+            tabServerSettings.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
+            tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownServerPort).EndInit();
+            tabPageLogging.ResumeLayout(false);
+            tabPageLogging.PerformLayout();
+            tabPageManageSettings.ResumeLayout(false);
+            groupBoxReset.ResumeLayout(false);
+            groupBoxReset.PerformLayout();
+            groupBoxImportSettings.ResumeLayout(false);
+            groupBoxImportSettings.PerformLayout();
+            groupBoxExportSettings.ResumeLayout(false);
+            groupBoxExportSettings.PerformLayout();
+            tabPageAbout.ResumeLayout(false);
+            groupBoxAbout.ResumeLayout(false);
+            groupBoxAbout.PerformLayout();
+            ResumeLayout(false);
 
         }
 
@@ -814,7 +573,6 @@ namespace HealthGearConfig
         private System.Windows.Forms.Panel panelServiceStatus;
         private System.Windows.Forms.TabControl tabServerSettings;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPageSMTP;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.NumericUpDown numericUpDownServerPort;
@@ -829,18 +587,6 @@ namespace HealthGearConfig
         private System.Windows.Forms.TabPage tabPageLogging;
         private System.Windows.Forms.TabPage tabPageManageSettings;
         private System.Windows.Forms.TabPage tabPageAbout;
-        private System.Windows.Forms.NumericUpDown numericUpDownSMTPPort;
-        private System.Windows.Forms.Label labelHostPort;
-        private System.Windows.Forms.TextBox textBoxSMTPHost;
-        private System.Windows.Forms.Label labelSMTPHost;
-        private System.Windows.Forms.TextBox textBoxSMTPUsername;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxSMTPPassword;
-        private System.Windows.Forms.Label labelSMTPPassword;
-        private System.Windows.Forms.CheckBox checkBoxSMTPAuth;
-        private System.Windows.Forms.CheckBox checkBoxSSL;
-        private System.Windows.Forms.ComboBox comboBoxLogLevel;
-        private System.Windows.Forms.Label labelLoggingLevel;
         private System.Windows.Forms.Button buttonBrowseLoggingPath;
         private System.Windows.Forms.TextBox textBoxLogPath;
         private System.Windows.Forms.Label labelLoggingPath;
@@ -854,7 +600,6 @@ namespace HealthGearConfig
         private System.Windows.Forms.Label labelResetSettings;
         private System.Windows.Forms.Button buttonResetSettings;
         private System.Windows.Forms.Label labelSettingsPreview;
-        private System.Windows.Forms.Button buttonSMTPTest;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.Button buttonImportSettings;

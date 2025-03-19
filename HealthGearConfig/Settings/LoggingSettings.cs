@@ -1,5 +1,5 @@
-﻿// Licensed to the .NET Foundation under one or more agreements.
-// The .NET Foundation licenses this file to you under the MIT license.
+﻿using System;
+using System.IO;
 
 namespace HealthGearConfig.Settings
 {
@@ -9,13 +9,14 @@ namespace HealthGearConfig.Settings
     public class LoggingSettings
     {
         /// <summary>
-        /// Livello di log (Verbose, Warning, Error).
-        /// </summary>
-        public string LogLevel { get; set; } = "Information";
-
-        /// <summary>
         /// Percorso della cartella in cui vengono salvati i file di log.
         /// </summary>
-        public string LogPath { get; set; } = @"C:\ProgramData\HealthGear\Logs";
+        public string LogPath { get; set; } = DefaultLogPath;
+
+        /// <summary>
+        /// Percorso predefinito dei log in `C:\ProgramData\HealthGear\Logs\`
+        /// </summary>
+        public static string DefaultLogPath =>
+            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "HealthGear", "Logs");
     }
 }

@@ -80,4 +80,3 @@ namespace HealthGearConfig.Services
         }
     }
 }
-
