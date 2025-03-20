@@ -45,7 +45,19 @@ namespace HealthGearConfig
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Inizializza la gestione della configurazione
+            // Inizializza la gestione della configurazione
+            var configManager = new ConfigFileManager();
             ConfigFileManager.EnsureDirectoriesExist();
+
+            // Test: Stampiamo le impostazioni caricate per verificare se funzionano
+            Console.WriteLine("📂 Configurazione caricata:");
+            Console.WriteLine($" - Porta Server: {configManager.Settings.ServerPort}");
+            Console.WriteLine($" - Percorso Database: {configManager.Settings.DatabasePath}");
+            Console.WriteLine($" - Cartella Upload: {configManager.Settings.UploadFolderPath}");
+            Console.WriteLine($" - Allowed Hosts: {configManager.Settings.AllowedHosts}");
+            configManager.Settings.ServerPort = 9090;
+            configManager.SaveConfig();
+
 
             Application.Run(new MainForm());
         }
