@@ -1,6 +1,6 @@
-﻿using System.Diagnostics;
+﻿using HealthGearConfig.Services;
+using System.Diagnostics;
 using System.Security.Principal;
-using HealthGearConfig.Settings;
 
 namespace HealthGearConfig
 {
@@ -9,29 +9,29 @@ namespace HealthGearConfig
         [STAThread]
         private static void Main()
         {
-            // 🔍 Controlla se l'app è in esecuzione come amministratore
-            if (!IsRunningAsAdministrator())
-            {
-                try
-                {
-                    ProcessStartInfo startInfo = new()
-                    {
-                        FileName = Application.ExecutablePath,
-                        Verb = "runas",
-                        UseShellExecute = true // 🛠 Necessario per l'UAC
-                    };
+            /*            // 🔍 Controlla se l'app è in esecuzione come amministratore
+                        if (!IsRunningAsAdministrator())
+                        {
+                            try
+                            {
+                                ProcessStartInfo startInfo = new()
+                                {
+                                    FileName = Application.ExecutablePath,
+                                    Verb = "runas",
+                                    UseShellExecute = true // 🛠 Necessario per l'UAC
+                                };
 
-                    Process.Start(startInfo);
-                }
-                catch
-                {
-                    MessageBox.Show("Devi eseguire questa applicazione come amministratore.", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                                Process.Start(startInfo);
+                            }
+                            catch
+                            {
+                                MessageBox.Show("Devi eseguire questa applicazione come amministratore.", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
 
-                // 🛑 Esce immediatamente dal processo corrente
-                Environment.Exit(0);
-                return;
-            }
+                            // 🛑 Esce immediatamente dal processo corrente
+                            Environment.Exit(0);
+                            return;
+                        }*/
 
             // 🛠 Previeni esecuzioni multiple
             using Mutex mutex = new(true, "HealthGearConfigMutex", out bool createdNew);
@@ -43,9 +43,10 @@ namespace HealthGearConfig
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            var serverSettings = new ServerSettings();
-            serverSettings.EnsureDirectoriesExist();
-            Services.StartManager.EnsureDirectoriesExist();
+
+            // Inizializza la gestione della configurazione
+            ConfigFileManager.EnsureDirectoriesExist();
+
             Application.Run(new MainForm());
         }
 
