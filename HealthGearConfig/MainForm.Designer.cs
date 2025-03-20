@@ -221,6 +221,7 @@ namespace HealthGearConfig
             buttonServer.TabIndex = 4;
             buttonServer.Text = "Modifica...";
             buttonServer.UseVisualStyleBackColor = true;
+            buttonServer.Click += buttonServer_Click;
             // 
             // labelServer
             // 

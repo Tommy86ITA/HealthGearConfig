@@ -11,7 +11,7 @@ namespace HealthGearConfig.Services
 
         public bool IsServiceInstalled { get; private set; }
         public bool IsServiceRunning { get; private set; }
-        public ConfigData Settings => _configManager.Settings;
+        public ConfigData Settings => _configManager.Settings!;
 
         public StartupManager()
         {

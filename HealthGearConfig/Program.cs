@@ -1,5 +1,7 @@
-﻿using HealthGearConfig.Services;
-using System.Diagnostics;
+﻿// Licensed to the .NET Foundation under one or more agreements.
+// The .NET Foundation licenses this file to you under the MIT license.
+
+using HealthGearConfig.Services;
 using System.Security.Principal;
 
 namespace HealthGearConfig
@@ -49,15 +51,7 @@ namespace HealthGearConfig
             var configManager = new ConfigFileManager();
             ConfigFileManager.EnsureDirectoriesExist();
 
-            // Test: Stampiamo le impostazioni caricate per verificare se funzionano
-            Console.WriteLine("📂 Configurazione caricata:");
-            Console.WriteLine($" - Porta Server: {configManager.Settings.ServerPort}");
-            Console.WriteLine($" - Percorso Database: {configManager.Settings.DatabasePath}");
-            Console.WriteLine($" - Cartella Upload: {configManager.Settings.UploadFolderPath}");
-            Console.WriteLine($" - Allowed Hosts: {configManager.Settings.AllowedHosts}");
-            configManager.Settings.ServerPort = 9090;
             configManager.SaveConfig();
-
 
             Application.Run(new MainForm());
         }

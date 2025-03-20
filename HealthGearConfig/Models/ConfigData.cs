@@ -14,10 +14,10 @@ namespace HealthGearConfig.Models
         {
             return new ConfigData
             {
-                ServerPort = 8081,
+                ServerPort = 5001,
                 DatabasePath = "C:\\ProgramData\\HealthGear\\healthgear.db",
                 UploadFolderPath = "C:\\HealthGear\\Uploads",
-                AllowedHosts = "*"
+                AllowedHosts = "localhost,0.0.0.0,[::]"
             };
         }
     }

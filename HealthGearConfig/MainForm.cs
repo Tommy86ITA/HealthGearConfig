@@ -139,5 +139,11 @@ namespace HealthGearConfig
         {
             ExitApplication();
         }
+
+        private void buttonServer_Click(object sender, EventArgs e)
+        {
+            using FormServerSettings settingsForm = new();
+            settingsForm.ShowDialog();
+        }
     }
 }

@@ -1,6 +1,8 @@
-﻿using HealthGearConfig.Models;
+﻿// Licensed to the .NET Foundation under one or more agreements.
+// The .NET Foundation licenses this file to you under the MIT license.
+
+using HealthGearConfig.Models;
 using Newtonsoft.Json;
-using System.Windows.Forms;
 
 namespace HealthGearConfig.Services
 {
@@ -15,7 +17,7 @@ namespace HealthGearConfig.Services
         /// <summary>
         /// Contiene le impostazioni attualmente caricate dalla configurazione.
         /// </summary>
-        public ConfigData Settings { get; private set; }
+        public ConfigData? Settings { get; private set; }
 
         /// <summary>
         /// Costruttore della classe ConfigFileManager.
