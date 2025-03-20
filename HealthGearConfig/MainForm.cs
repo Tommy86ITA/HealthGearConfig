@@ -15,8 +15,15 @@ namespace HealthGearConfig
         public MainForm()
         {
             InitializeComponent();
+            this.FormClosing += MainForm_FormClosing;
             _startupManager = new StartupManager();
             UpdateServiceStatus();
+        }
+
+        private void MainForm_FormClosing(object? sender, FormClosingEventArgs e)
+        {
+            if (!ExitManager.ConfirmExit())
+                e.Cancel = true; // ❌ Blocca la chiusura dell'app se necessario
         }
 
         ///--------------------------------------------------------------------------------
@@ -121,23 +128,18 @@ namespace HealthGearConfig
         /// <summary>
         /// Gestisce la chiusura dell'applicazione quando l'utente clicca sulla "X" o preme ALT+F4.
         /// </summary>
-        private void Form1_OnFormClosing(object? sender, FormClosingEventArgs e)
-
-        {
-            ExitApplication();
-        }
 
         /// <summary>
         /// Gestisce l'uscita dall'applicazione, mostrando avvisi se necessario.
         /// </summary>
-        private static void ExitApplication()
-        {
-            ExitManager.ConfirmExit();
-        }
+
 
         private void buttonQuit_Click(object sender, EventArgs e)
         {
-            ExitApplication();
+            if (ExitManager.ConfirmExit())
+            {
+                Application.Exit(); // ✅ Chiude l'app solo se `ConfirmExit()` restituisce true
+            }
         }
 
         private void buttonServer_Click(object sender, EventArgs e)
