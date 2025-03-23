@@ -17,7 +17,7 @@ namespace HealthGearConfig
             InitializeComponent();
             this.FormClosing += MainForm_FormClosing;
             _startupManager = new StartupManager();
-            UpdateServiceStatus();
+            //UpdateServiceStatus();                        Temporaneamente disabilito per agevolare il debug
         }
 
         private void MainForm_FormClosing(object? sender, FormClosingEventArgs e)
@@ -146,6 +146,12 @@ namespace HealthGearConfig
         {
             using FormServerSettings settingsForm = new();
             settingsForm.ShowDialog();
+        }
+
+        private void buttonFolderWizard_Click(object sender, EventArgs e)
+        {
+            using FormMigrationWizard wizard = new();
+            wizard.ShowDialog(this); // Modal per bloccare l'interazione con il MainForm
         }
     }
 }

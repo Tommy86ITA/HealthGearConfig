@@ -11,7 +11,7 @@ namespace HealthGearConfig.Services
         public static bool ConfirmExit()
         {
             // Se il wizard di migrazione è ancora aperto, impediamo la chiusura
-            if (MigrationWizard.IsRunning)
+            if (MigrationService.IsRunning)
             {
                 MessageBox.Show(
                     "Il wizard di migrazione è ancora in esecuzione. Attendere il completamento prima di chiudere l'applicazione.",
