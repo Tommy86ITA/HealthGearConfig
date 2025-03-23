@@ -1,0 +1,20 @@
+﻿mode: ContinuousDeployment
+next-version: 1.0.0
+branches:
+  master:
+    tag: preview
+    increment: Patch
+  develop:
+    tag: dev
+    increment: Minor
+  feature:
+    tag: feature
+    increment: Minor
+  release:
+    tag: rc
+    increment: None
+  main:
+    tag: ''
+    increment: Patch
+ignore:
+  sha: []
