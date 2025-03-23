@@ -90,5 +90,32 @@ namespace HealthGearConfig
         {
             _state.DeleteSourceAfterMigration = checkBoxDeleteSource.Checked;
         }
+
+        private void SaveMigrationLogToFile()
+        {
+            using SaveFileDialog dialog = new()
+            {
+                Title = "Salva il log della migrazione",
+                Filter = "File di testo|*.txt",
+                FileName = "Migration.log",
+                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
+            };
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    File.WriteAllText(dialog.FileName, _state.MigrationLog);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Impossibile salvare il file: {ex.Message}", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void buttonSaveLog_Click(object sender, EventArgs e)
+        {
+            SaveMigrationLogToFile();
+        }
     }
 }

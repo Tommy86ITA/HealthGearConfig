@@ -143,9 +143,6 @@ Clicca "Avanti" per iniziare.</value>
 Assicurati che il percorso sia diverso da quello attuale e che l’unità di destinazione disponga di spazio sufficiente.
 </value>
   </data>
-  <metadata name="toolTipProvider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="labelProgress.Text" xml:space="preserve">
     <value>L'operazione potrebbe richiedere da alcuni minuti a diverse ore, in base alla quantità di dati da trasferire, alla velocità dei dispositivi di archiviazione e, nel caso di destinazioni di rete, alle prestazioni della rete stessa.</value>
   </data>

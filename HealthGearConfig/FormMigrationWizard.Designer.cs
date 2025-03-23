@@ -669,6 +669,7 @@ namespace HealthGearConfig
             buttonSaveLog.TabIndex = 5;
             buttonSaveLog.Text = "Salva log...";
             buttonSaveLog.UseVisualStyleBackColor = true;
+            buttonSaveLog.Click += buttonSaveLog_Click;
             // 
             // labelLog
             // 
@@ -705,9 +706,9 @@ namespace HealthGearConfig
             AutoSize = true;
             ClientSize = new Size(839, 708);
             ControlBox = false;
+            Controls.Add(panelSummary);
             Controls.Add(panelSelectFolders);
             Controls.Add(panelConfirm);
-            Controls.Add(panelSummary);
             Controls.Add(panelProgress);
             Controls.Add(panelDestination);
             Controls.Add(flowLayoutPanelNavigation);
