@@ -153,5 +153,11 @@ namespace HealthGearConfig
             using FormMigrationWizard wizard = new();
             wizard.ShowDialog(this); // Modal per bloccare l'interazione con il MainForm
         }
+
+        private void buttonInfo_Click(object sender, EventArgs e)
+        {
+            using FormAbout aboutForm = new();
+            aboutForm.ShowDialog();
+        }
     }
 }

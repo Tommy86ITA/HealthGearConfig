@@ -353,6 +353,7 @@ namespace HealthGearConfig
             buttonInfo.TabIndex = 11;
             buttonInfo.Text = "Info...";
             buttonInfo.UseVisualStyleBackColor = true;
+            buttonInfo.Click += buttonInfo_Click;
             // 
             // MainForm
             // 

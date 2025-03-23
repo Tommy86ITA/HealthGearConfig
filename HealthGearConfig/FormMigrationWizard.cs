@@ -46,7 +46,7 @@ namespace HealthGearConfig
 
             /// Nasconde tutte le pagine tranne la prima
             for (int i = 0; i < wizardPages.Count; i++)
-                wizardPages[i].Visible = (i == 0);
+                wizardPages[i].Visible = i == 0;
 
             currentPageIndex = 0;
             SetHeader(pageHeaders[0].Title, pageHeaders[0].Subtitle);

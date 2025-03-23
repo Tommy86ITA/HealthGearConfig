@@ -195,7 +195,7 @@ namespace HealthGearConfig.Services
         /// <returns></returns>
         private static int GetPercent(int current, int total)
         {
-            return total == 0 ? 0 : (int)((current / (double)total) * 100);
+            return total == 0 ? 0 : (int)(current / (double)total * 100);
         }
     }
 }
