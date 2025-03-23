@@ -3,11 +3,9 @@
   "version": "1.0.0-preview",
   "assemblyVersion": "1.0",
   "fileVersion": "1.0.0",
-  "versionHeightOffset": 0,
-  "publicReleaseRefSpec": [
-    "^refs/heads/main$",
-    "^refs/tags/v\\d+(?:\\.\\d+){0,2}$"
-  ],
+  "versionHeightOffset": 1000,
+  "publicReleaseRefSpec": ["^refs/heads/main$",
+    "^refs/tags/v\\d+(?:\\.\\d+){0,2}(?:-[\\w\\d]+)?$"],
   "cloudBuild": {
     "setVersionVariables": true,
     "buildNumber": {
