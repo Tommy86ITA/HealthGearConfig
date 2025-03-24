@@ -31,6 +31,7 @@ namespace HealthGearConfig
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             folderBrowserDialog = new FolderBrowserDialog();
             openFileDialog = new OpenFileDialog();
             saveFileDialog = new SaveFileDialog();
@@ -366,6 +367,7 @@ namespace HealthGearConfig
             Controls.Add(buttonQuit);
             Controls.Add(tableLayoutPanelMain);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 2, 4, 2);
             MaximizeBox = false;
             Name = "MainForm";

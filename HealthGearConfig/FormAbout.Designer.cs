@@ -275,6 +275,8 @@
             MdiChildrenMinimizedAnchorBottom = false;
             MinimizeBox = false;
             Name = "FormAbout";
+            ShowIcon = false;
+            ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "About...";
             groupBoxSoftwareVers.ResumeLayout(false);
