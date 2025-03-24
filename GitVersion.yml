@@ -1,20 +1,26 @@
-﻿mode: ContinuousDeployment
-next-version: 1.0.0
+﻿next-version: 1.0.0-preview
+mode: ContinuousDeployment
 branches:
+  main:
+    regex: ^main$
+    increment: Patch
   master:
-    tag: preview
+    regex: ^master$
     increment: Patch
   develop:
-    tag: dev
+    regex: ^dev(elop)?(ment)?$
     increment: Minor
   feature:
-    tag: feature
+    regex: ^feature[/-]
     increment: Minor
-  release:
-    tag: rc
-    increment: None
-  main:
-    tag: ''
+  hotfix:
+    regex: ^hotfix[/-]
     increment: Patch
+  release:
+    regex: ^releases?[/-]
+    increment: None
+  pull-request:
+    regex: ^(pull|pr)[/-]
+    increment: Inherit
 ignore:
   sha: []

@@ -118,14 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="databasefolder" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\databasefolder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="foldererror" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\foldererror.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="foldermigrlogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\foldermigrlogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hglogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\hglogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="foldersucces" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\foldersucces.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,7 +130,16 @@
   <data name="folderwarning" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\folderwarning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="foldermigrlogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\foldermigrlogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="databasefolder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\databasefolder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="uploadfolder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\uploadfolder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HgLogo_resized" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\HgLogo_resized.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

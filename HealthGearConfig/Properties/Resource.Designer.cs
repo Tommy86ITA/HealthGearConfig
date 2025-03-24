@@ -113,6 +113,26 @@ namespace HealthGearConfig.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hglogo {
+            get {
+                object obj = ResourceManager.GetObject("hglogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HgLogo_resized {
+            get {
+                object obj = ResourceManager.GetObject("HgLogo_resized", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap uploadfolder {
             get {
                 object obj = ResourceManager.GetObject("uploadfolder", resourceCulture);
