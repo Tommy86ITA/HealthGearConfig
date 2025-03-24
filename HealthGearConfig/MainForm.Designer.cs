@@ -78,26 +78,26 @@ namespace HealthGearConfig
             tableLayoutPanelMain.Controls.Add(groupBoxFolders, 0, 2);
             tableLayoutPanelMain.Controls.Add(groupBoxServer, 0, 1);
             tableLayoutPanelMain.Controls.Add(groupBoxServiceStatus, 0, 0);
-            tableLayoutPanelMain.Location = new Point(6, 1);
-            tableLayoutPanelMain.Margin = new Padding(2, 1, 2, 1);
+            tableLayoutPanelMain.Location = new Point(11, 2);
+            tableLayoutPanelMain.Margin = new Padding(4, 2, 4, 2);
             tableLayoutPanelMain.Name = "tableLayoutPanelMain";
             tableLayoutPanelMain.RowCount = 4;
             tableLayoutPanelMain.RowStyles.Add(new RowStyle(SizeType.Percent, 19.9992046F));
             tableLayoutPanelMain.RowStyles.Add(new RowStyle(SizeType.Percent, 19.9992F));
             tableLayoutPanelMain.RowStyles.Add(new RowStyle(SizeType.Percent, 19.9992F));
             tableLayoutPanelMain.RowStyles.Add(new RowStyle(SizeType.Percent, 19.9992F));
-            tableLayoutPanelMain.Size = new Size(496, 422);
+            tableLayoutPanelMain.Size = new Size(921, 900);
             tableLayoutPanelMain.TabIndex = 8;
             // 
             // groupBoxLog
             // 
             groupBoxLog.Anchor = AnchorStyles.None;
             groupBoxLog.Controls.Add(tableLayoutPanelLog);
-            groupBoxLog.Location = new Point(2, 317);
-            groupBoxLog.Margin = new Padding(2, 1, 2, 1);
+            groupBoxLog.Location = new Point(4, 677);
+            groupBoxLog.Margin = new Padding(4, 2, 4, 2);
             groupBoxLog.Name = "groupBoxLog";
-            groupBoxLog.Padding = new Padding(2, 1, 2, 1);
-            groupBoxLog.Size = new Size(492, 103);
+            groupBoxLog.Padding = new Padding(4, 2, 4, 2);
+            groupBoxLog.Size = new Size(913, 220);
             groupBoxLog.TabIndex = 7;
             groupBoxLog.TabStop = false;
             groupBoxLog.Text = "Visualizza Log";
@@ -107,38 +107,39 @@ namespace HealthGearConfig
             tableLayoutPanelLog.ColumnCount = 2;
             tableLayoutPanelLog.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 63.7362633F));
             tableLayoutPanelLog.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 36.2637367F));
-            tableLayoutPanelLog.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 11F));
+            tableLayoutPanelLog.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
             tableLayoutPanelLog.Controls.Add(buttonLog, 1, 0);
             tableLayoutPanelLog.Controls.Add(labelLog, 0, 0);
             tableLayoutPanelLog.Dock = DockStyle.Fill;
-            tableLayoutPanelLog.Location = new Point(2, 17);
-            tableLayoutPanelLog.Margin = new Padding(2, 1, 2, 1);
+            tableLayoutPanelLog.Location = new Point(4, 34);
+            tableLayoutPanelLog.Margin = new Padding(4, 2, 4, 2);
             tableLayoutPanelLog.Name = "tableLayoutPanelLog";
             tableLayoutPanelLog.RowCount = 1;
             tableLayoutPanelLog.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanelLog.Size = new Size(488, 85);
+            tableLayoutPanelLog.Size = new Size(905, 184);
             tableLayoutPanelLog.TabIndex = 0;
             // 
             // buttonLog
             // 
             buttonLog.Anchor = AnchorStyles.None;
             buttonLog.FlatAppearance.BorderSize = 2;
-            buttonLog.Location = new Point(345, 31);
-            buttonLog.Margin = new Padding(2, 1, 2, 1);
+            buttonLog.Location = new Point(640, 68);
+            buttonLog.Margin = new Padding(4, 2, 4, 2);
             buttonLog.Name = "buttonLog";
-            buttonLog.Size = new Size(108, 22);
+            buttonLog.Size = new Size(201, 47);
             buttonLog.TabIndex = 4;
             buttonLog.Text = "Apri Log...";
             buttonLog.UseVisualStyleBackColor = true;
+            buttonLog.Click += buttonLog_Click;
             // 
             // labelLog
             // 
             labelLog.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             labelLog.AutoSize = true;
-            labelLog.Location = new Point(2, 35);
-            labelLog.Margin = new Padding(2, 0, 2, 0);
+            labelLog.Location = new Point(4, 76);
+            labelLog.Margin = new Padding(4, 0, 4, 0);
             labelLog.Name = "labelLog";
-            labelLog.Size = new Size(307, 15);
+            labelLog.Size = new Size(568, 32);
             labelLog.TabIndex = 7;
             labelLog.Text = "Apri la cartella con i Log di HealthGear.";
             // 
@@ -146,11 +147,11 @@ namespace HealthGearConfig
             // 
             groupBoxFolders.Anchor = AnchorStyles.None;
             groupBoxFolders.Controls.Add(tableLayoutPanelFolders);
-            groupBoxFolders.Location = new Point(2, 211);
-            groupBoxFolders.Margin = new Padding(2, 1, 2, 1);
+            groupBoxFolders.Location = new Point(4, 452);
+            groupBoxFolders.Margin = new Padding(4, 2, 4, 2);
             groupBoxFolders.Name = "groupBoxFolders";
-            groupBoxFolders.Padding = new Padding(2, 1, 2, 1);
-            groupBoxFolders.Size = new Size(492, 103);
+            groupBoxFolders.Padding = new Padding(4, 2, 4, 2);
+            groupBoxFolders.Size = new Size(913, 220);
             groupBoxFolders.TabIndex = 6;
             groupBoxFolders.TabStop = false;
             groupBoxFolders.Text = "Spostamento Cartelle";
@@ -160,26 +161,26 @@ namespace HealthGearConfig
             tableLayoutPanelFolders.ColumnCount = 2;
             tableLayoutPanelFolders.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 63.6263733F));
             tableLayoutPanelFolders.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 36.3736267F));
-            tableLayoutPanelFolders.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 11F));
+            tableLayoutPanelFolders.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
             tableLayoutPanelFolders.Controls.Add(buttonFolderWizard, 1, 0);
             tableLayoutPanelFolders.Controls.Add(labelFolders, 0, 0);
             tableLayoutPanelFolders.Dock = DockStyle.Fill;
-            tableLayoutPanelFolders.Location = new Point(2, 17);
-            tableLayoutPanelFolders.Margin = new Padding(2, 1, 2, 1);
+            tableLayoutPanelFolders.Location = new Point(4, 34);
+            tableLayoutPanelFolders.Margin = new Padding(4, 2, 4, 2);
             tableLayoutPanelFolders.Name = "tableLayoutPanelFolders";
             tableLayoutPanelFolders.RowCount = 1;
             tableLayoutPanelFolders.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanelFolders.Size = new Size(488, 85);
+            tableLayoutPanelFolders.Size = new Size(905, 184);
             tableLayoutPanelFolders.TabIndex = 0;
             // 
             // buttonFolderWizard
             // 
             buttonFolderWizard.Anchor = AnchorStyles.None;
             buttonFolderWizard.FlatAppearance.BorderSize = 2;
-            buttonFolderWizard.Location = new Point(345, 31);
-            buttonFolderWizard.Margin = new Padding(2, 1, 2, 1);
+            buttonFolderWizard.Location = new Point(639, 68);
+            buttonFolderWizard.Margin = new Padding(4, 2, 4, 2);
             buttonFolderWizard.Name = "buttonFolderWizard";
-            buttonFolderWizard.Size = new Size(108, 22);
+            buttonFolderWizard.Size = new Size(201, 47);
             buttonFolderWizard.TabIndex = 4;
             buttonFolderWizard.Text = "Wizard...";
             buttonFolderWizard.UseVisualStyleBackColor = true;
@@ -189,10 +190,10 @@ namespace HealthGearConfig
             // 
             labelFolders.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             labelFolders.AutoSize = true;
-            labelFolders.Location = new Point(2, 27);
-            labelFolders.Margin = new Padding(2, 0, 2, 0);
+            labelFolders.Location = new Point(4, 44);
+            labelFolders.Margin = new Padding(4, 0, 4, 0);
             labelFolders.Name = "labelFolders";
-            labelFolders.Size = new Size(306, 30);
+            labelFolders.Size = new Size(567, 96);
             labelFolders.TabIndex = 7;
             labelFolders.Text = "Avvia il wizard di spostamento sicuro della cartella di residenza del DB e quella per l'upload dei documenti.";
             // 
@@ -200,11 +201,11 @@ namespace HealthGearConfig
             // 
             groupBoxServer.Anchor = AnchorStyles.None;
             groupBoxServer.Controls.Add(tableLayoutPanelServer);
-            groupBoxServer.Location = new Point(2, 106);
-            groupBoxServer.Margin = new Padding(2, 1, 2, 1);
+            groupBoxServer.Location = new Point(4, 227);
+            groupBoxServer.Margin = new Padding(4, 2, 4, 2);
             groupBoxServer.Name = "groupBoxServer";
-            groupBoxServer.Padding = new Padding(2, 1, 2, 1);
-            groupBoxServer.Size = new Size(492, 103);
+            groupBoxServer.Padding = new Padding(4, 2, 4, 2);
+            groupBoxServer.Size = new Size(913, 220);
             groupBoxServer.TabIndex = 5;
             groupBoxServer.TabStop = false;
             groupBoxServer.Text = "Impostazioni Server";
@@ -214,26 +215,26 @@ namespace HealthGearConfig
             tableLayoutPanelServer.ColumnCount = 2;
             tableLayoutPanelServer.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 63.5164833F));
             tableLayoutPanelServer.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 36.4835167F));
-            tableLayoutPanelServer.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 11F));
+            tableLayoutPanelServer.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
             tableLayoutPanelServer.Controls.Add(buttonServer, 1, 0);
             tableLayoutPanelServer.Controls.Add(labelServer, 0, 0);
             tableLayoutPanelServer.Dock = DockStyle.Fill;
-            tableLayoutPanelServer.Location = new Point(2, 17);
-            tableLayoutPanelServer.Margin = new Padding(2, 1, 2, 1);
+            tableLayoutPanelServer.Location = new Point(4, 34);
+            tableLayoutPanelServer.Margin = new Padding(4, 2, 4, 2);
             tableLayoutPanelServer.Name = "tableLayoutPanelServer";
             tableLayoutPanelServer.RowCount = 1;
             tableLayoutPanelServer.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanelServer.Size = new Size(488, 85);
+            tableLayoutPanelServer.Size = new Size(905, 184);
             tableLayoutPanelServer.TabIndex = 0;
             // 
             // buttonServer
             // 
             buttonServer.Anchor = AnchorStyles.None;
             buttonServer.FlatAppearance.BorderSize = 2;
-            buttonServer.Location = new Point(344, 31);
-            buttonServer.Margin = new Padding(2, 1, 2, 1);
+            buttonServer.Location = new Point(639, 68);
+            buttonServer.Margin = new Padding(4, 2, 4, 2);
             buttonServer.Name = "buttonServer";
-            buttonServer.Size = new Size(108, 22);
+            buttonServer.Size = new Size(201, 47);
             buttonServer.TabIndex = 4;
             buttonServer.Text = "Modifica...";
             buttonServer.UseVisualStyleBackColor = true;
@@ -243,10 +244,10 @@ namespace HealthGearConfig
             // 
             labelServer.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             labelServer.AutoSize = true;
-            labelServer.Location = new Point(2, 27);
-            labelServer.Margin = new Padding(2, 0, 2, 0);
+            labelServer.Location = new Point(4, 60);
+            labelServer.Margin = new Padding(4, 0, 4, 0);
             labelServer.Name = "labelServer";
-            labelServer.Size = new Size(305, 30);
+            labelServer.Size = new Size(566, 64);
             labelServer.TabIndex = 7;
             labelServer.Text = "Clicca per modificare le impostazioni del server (porta, allowed hosts...).";
             // 
@@ -254,11 +255,11 @@ namespace HealthGearConfig
             // 
             groupBoxServiceStatus.Anchor = AnchorStyles.None;
             groupBoxServiceStatus.Controls.Add(tableLayoutPanelService);
-            groupBoxServiceStatus.Location = new Point(2, 1);
-            groupBoxServiceStatus.Margin = new Padding(2, 1, 2, 1);
+            groupBoxServiceStatus.Location = new Point(4, 2);
+            groupBoxServiceStatus.Margin = new Padding(4, 2, 4, 2);
             groupBoxServiceStatus.Name = "groupBoxServiceStatus";
-            groupBoxServiceStatus.Padding = new Padding(2, 1, 2, 1);
-            groupBoxServiceStatus.Size = new Size(492, 103);
+            groupBoxServiceStatus.Padding = new Padding(4, 2, 4, 2);
+            groupBoxServiceStatus.Size = new Size(913, 220);
             groupBoxServiceStatus.TabIndex = 3;
             groupBoxServiceStatus.TabStop = false;
             groupBoxServiceStatus.Text = "Stato servizio";
@@ -275,22 +276,22 @@ namespace HealthGearConfig
             tableLayoutPanelService.Controls.Add(panelServiceStatus, 2, 0);
             tableLayoutPanelService.Controls.Add(buttonStopService, 1, 0);
             tableLayoutPanelService.Dock = DockStyle.Fill;
-            tableLayoutPanelService.Location = new Point(2, 17);
-            tableLayoutPanelService.Margin = new Padding(2, 1, 2, 1);
+            tableLayoutPanelService.Location = new Point(4, 34);
+            tableLayoutPanelService.Margin = new Padding(4, 2, 4, 2);
             tableLayoutPanelService.Name = "tableLayoutPanelService";
             tableLayoutPanelService.RowCount = 1;
             tableLayoutPanelService.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanelService.Size = new Size(488, 85);
+            tableLayoutPanelService.Size = new Size(905, 184);
             tableLayoutPanelService.TabIndex = 0;
             // 
             // buttonStartService
             // 
             buttonStartService.Anchor = AnchorStyles.None;
             buttonStartService.FlatAppearance.BorderSize = 2;
-            buttonStartService.Location = new Point(20, 31);
-            buttonStartService.Margin = new Padding(2, 1, 2, 1);
+            buttonStartService.Location = new Point(36, 68);
+            buttonStartService.Margin = new Padding(4, 2, 4, 2);
             buttonStartService.Name = "buttonStartService";
-            buttonStartService.Size = new Size(108, 22);
+            buttonStartService.Size = new Size(201, 47);
             buttonStartService.TabIndex = 4;
             buttonStartService.Text = "Avvia servizio";
             buttonStartService.UseVisualStyleBackColor = true;
@@ -299,10 +300,10 @@ namespace HealthGearConfig
             // 
             labelServiceStatus.Anchor = AnchorStyles.None;
             labelServiceStatus.AutoSize = true;
-            labelServiceStatus.Location = new Point(368, 35);
-            labelServiceStatus.Margin = new Padding(2, 0, 2, 0);
+            labelServiceStatus.Location = new Point(675, 76);
+            labelServiceStatus.Margin = new Padding(4, 0, 4, 0);
             labelServiceStatus.Name = "labelServiceStatus";
-            labelServiceStatus.Size = new Size(76, 15);
+            labelServiceStatus.Size = new Size(155, 32);
             labelServiceStatus.TabIndex = 6;
             labelServiceStatus.Text = "Stato servizio";
             // 
@@ -311,20 +312,20 @@ namespace HealthGearConfig
             panelServiceStatus.Anchor = AnchorStyles.None;
             panelServiceStatus.BackColor = Color.Red;
             panelServiceStatus.BorderStyle = BorderStyle.FixedSingle;
-            panelServiceStatus.Location = new Point(298, 27);
-            panelServiceStatus.Margin = new Padding(2, 1, 2, 1);
+            panelServiceStatus.Location = new Point(553, 60);
+            panelServiceStatus.Margin = new Padding(4, 2, 4, 2);
             panelServiceStatus.Name = "panelServiceStatus";
-            panelServiceStatus.Size = new Size(24, 31);
+            panelServiceStatus.Size = new Size(43, 64);
             panelServiceStatus.TabIndex = 8;
             // 
             // buttonStopService
             // 
             buttonStopService.Anchor = AnchorStyles.None;
             buttonStopService.FlatAppearance.BorderSize = 2;
-            buttonStopService.Location = new Point(168, 31);
-            buttonStopService.Margin = new Padding(2, 1, 2, 1);
+            buttonStopService.Location = new Point(310, 68);
+            buttonStopService.Margin = new Padding(4, 2, 4, 2);
             buttonStopService.Name = "buttonStopService";
-            buttonStopService.Size = new Size(108, 22);
+            buttonStopService.Size = new Size(201, 47);
             buttonStopService.TabIndex = 5;
             buttonStopService.Text = "Arresta servizio";
             buttonStopService.UseVisualStyleBackColor = true;
@@ -333,10 +334,10 @@ namespace HealthGearConfig
             // 
             buttonQuit.Anchor = AnchorStyles.None;
             buttonQuit.FlatAppearance.BorderSize = 2;
-            buttonQuit.Location = new Point(139, 436);
-            buttonQuit.Margin = new Padding(2, 1, 2, 1);
+            buttonQuit.Location = new Point(258, 930);
+            buttonQuit.Margin = new Padding(4, 2, 4, 2);
             buttonQuit.Name = "buttonQuit";
-            buttonQuit.Size = new Size(108, 22);
+            buttonQuit.Size = new Size(201, 47);
             buttonQuit.TabIndex = 10;
             buttonQuit.Text = "Esci";
             buttonQuit.UseVisualStyleBackColor = true;
@@ -346,10 +347,10 @@ namespace HealthGearConfig
             // 
             buttonInfo.Anchor = AnchorStyles.None;
             buttonInfo.FlatAppearance.BorderSize = 2;
-            buttonInfo.Location = new Point(262, 436);
-            buttonInfo.Margin = new Padding(2, 1, 2, 1);
+            buttonInfo.Location = new Point(487, 930);
+            buttonInfo.Margin = new Padding(4, 2, 4, 2);
             buttonInfo.Name = "buttonInfo";
-            buttonInfo.Size = new Size(108, 22);
+            buttonInfo.Size = new Size(201, 47);
             buttonInfo.TabIndex = 11;
             buttonInfo.Text = "Info...";
             buttonInfo.UseVisualStyleBackColor = true;
@@ -357,15 +358,15 @@ namespace HealthGearConfig
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            ClientSize = new Size(509, 471);
+            ClientSize = new Size(945, 1005);
             Controls.Add(buttonInfo);
             Controls.Add(buttonQuit);
             Controls.Add(tableLayoutPanelMain);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(2, 1, 2, 1);
+            Margin = new Padding(4, 2, 4, 2);
             MaximizeBox = false;
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;

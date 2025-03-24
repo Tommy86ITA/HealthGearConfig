@@ -2,6 +2,7 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 
 using HealthGearConfig.Services;
+using System.Diagnostics;
 
 namespace HealthGearConfig
 {
@@ -17,7 +18,7 @@ namespace HealthGearConfig
             InitializeComponent();
             this.FormClosing += MainForm_FormClosing;
             _startupManager = new StartupManager();
-            //UpdateServiceStatus();                        Temporaneamente disabilito per agevolare il debug
+            UpdateServiceStatus();                        
         }
 
         private void MainForm_FormClosing(object? sender, FormClosingEventArgs e)
@@ -133,7 +134,6 @@ namespace HealthGearConfig
         /// Gestisce l'uscita dall'applicazione, mostrando avvisi se necessario.
         /// </summary>
 
-
         private void buttonQuit_Click(object sender, EventArgs e)
         {
             if (ExitManager.ConfirmExit())
@@ -142,12 +142,22 @@ namespace HealthGearConfig
             }
         }
 
+        /// <summary>
+        /// Apre la finestra per le impostazioni del server.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonServer_Click(object sender, EventArgs e)
         {
             using FormServerSettings settingsForm = new();
             settingsForm.ShowDialog();
         }
 
+        /// <summary>
+        /// Apre la finestra per la migrazione delle cartelle.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonFolderWizard_Click(object sender, EventArgs e)
         {
             using FormMigrationWizard wizard = new();
@@ -158,6 +168,32 @@ namespace HealthGearConfig
         {
             using FormAbout aboutForm = new();
             aboutForm.ShowDialog();
+        }
+
+        /// <summary>
+        /// Apre la cartella dei log in Esplora Risorse.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonLog_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string logDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "HealthGear", "Logs");
+
+                if (Directory.Exists(logDirectory))
+                {
+                    Process.Start("explorer.exe", logDirectory);
+                }
+                else
+                {
+                    MessageBox.Show("La cartella dei log non esiste.", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Errore nell'apertura della cartella log:\n{ex.Message}", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
